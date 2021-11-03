@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Softnio">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="TokenWiz is a modern and clean admin template for ICO Dashboard.">
+	<!-- Fav Icon  -->
+	<link rel="shortcut icon" href="images/favicon.png">
+	<!-- Site Title  -->
+	<title>Documentation | ICO Crypto - ICO Landing Page &amp; Multi-Purpose Cryptocurrency HTML Template</title>
+	<!-- Vendor Bundle CSS -->
+	<link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=100">
+	<link rel="stylesheet" href="assets/css/prettify.css">
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="assets/css/style.css?ver=100">
+
+	<style>
+        .section{
+            padding: 20px 0 0;
+        }
+        a{
+            color: #304073;
+        }
+        a:hover,a:focus,a:active{
+            color: #2b56f5;
+        }
+        h1,h2,h3,h4,h5,h6,p.lead{
+            color: #304073;
+            margin-bottom: 8px;
+        }
+        p,span{
+            color: #6783b8;
+        }
+        .doc-topbar{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 10px 0;
+            background: #fff;
+            box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.02);
+        }
+        .doc-logo{
+            height: 40px;
+            display: block;
+        }
+        .doc-logo img{
+            height: 40px;
+        }
+        .doc-topbar-info ul{
+            margin: 0 -15px;
+        }
+        .doc-topbar-info ul li{
+            font-size: 13px;
+            padding: 0 15px;
+        }
+        .doc-sidebar{
+            position: fixed;
+            top: 0;
+            width: 260px;
+            border-radius: 4px;
+            padding: 15px 0;
+            margin-top: 90px;
+            background: #fff;
+            max-height: calc(100vh - 120px);
+            box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.07);
+        }
+        .doc-sidebar-head{
+            color: #304073;
+            margin:15px 0 5px;
+            padding: 0 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .doc-sidebar-nav{
+            padding: 0 20px;
+        }
+        .doc-sidebar-nav li{
+            padding: 5px 0;
+        }
+        .doc-sidebar-nav li a{
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            font-weight: 400;
+            color: #6783b8;
+            display: block;
+        }
+        .doc-sidebar-nav li a:hover,.doc-sidebar-nav li a:focus,.doc-sidebar-nav li a:active,.doc-sidebar-nav li.active a{
+            color: #2b56f5;
+        }
+        .doc-content{
+            margin-left: 310px;
+        }
+        .doc-content{
+        }
+        .doc-file-list{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .doc-file-list li{
+            font-weight: 400;
+            width: 33.33%;
+        }
+        ol li{
+            list-style: decimal;
+        }
+        .doc-ol li{
+            list-style-position: inside;
+            font-weight: 400;
+        }
+        .lang-html,.lang-css,.lang-js{
+            overflow-x: hidden;
+        }
+    </style>
+	
+</head>
+
+<body class="admin-dashboard-demo">
+    
+    <div class="doc-topbar">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="div">
+                    <a class="doc-logo" href="./"><img src="images/logo.png" alt="logo"></a>
+                </div>
+                <div class="doc-topbar-info d-none d-md-block">
+                    <ul class="d-flex align-items-center">
+                        <li>Version: <strong>1.9.3</strong></li>
+                        <li>Updated: 05/05/2021</li>
+                        <li>By: <a href="https://softnio.com" target="_blank">Softnio</a></li>
+                        <li><a target="_blank" href="http://demo.themenio.com/ico/" class="btn btn-sm btn-primary">Demo Preview</a></li>
+                    </ul>
+                </div>
+                <div class="d-md-none">
+                    <a href="#" class="doc-menu-toggler"><em class="ti ti-align-right"></em></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="docSidebar" class="doc-sidebar">
+            <div>
+                <ul class="doc-sidebar-nav">
+                    <li><a class="to-section" href="index.html#introduction">Introduction</a></li>
+                    <li><a class="to-section" href="index.html#getStarted">Geting Started</a></li>
+                    <li><a class="to-section" href="index.html#htmlStructure">HTML Files &amp; Structure</a></li>
+                    <li><a class="to-section" href="index.html#cssStructure">CSS Files &amp; Structure</a></li>
+                    <li><a class="to-section" href="index.html#jsStructure">JavaScript Files &amp; Structure</a></li>
+                    <li><a class="to-section" href="index.html#others">Others</a></li>
+                    <li><a class="to-section" href="index.html#credits">Sources and Credits</a></li>
+                    <li><a class="to-section" href="changeslog.html">Changes Log</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="doc-content">
+            <div id="log" class="section">
+               <div class="gaps-9x"></div>
+                <h2>Changes Log</h2>
+				<div class="gaps-2x"></div>
+				<h5 class="log-version">v1.9.3</h5>
+                <span class="log-date">05/05/2021</span>
+                <ul class="log-list">
+                   <li>!+ Updated and fix countdown timer.</li>
+                   <li>!+ Updated jQuery version to latest.</li>
+                   <li>!+ Updated other third-party js libraies to latest.</li>
+                </ul>
+                <div class="gaps-2x"></div>
+				<h5 class="log-version">v1.9.2</h5>
+                <span class="log-date">07/01/2020</span>
+                <ul class="log-list">
+                   <li>!+ Optimized all the images to improve loading site.</li>
+				   <li>!+ Fixed missing image and shape image responsive issue.</li>
+                   <li>!+ Fixed bootstrap proper js issues.</li>
+                   <li>!! Updated related stylesheet.</li>
+                </ul>
+                <div class="gaps-2x"></div>
+				<h5 class="log-version">v1.9.1</h5>
+                <span class="log-date">12/02/2019</span>
+                <ul class="log-list">
+                   <li>+ 1 New Landing Page Added (@cyanus-multi)</li>
+				   <li>+ 16 Other Pages Added (@about-v3 @contact-v2 @exchange @mission @partner @career @coming-soon @error-404.)</li>
+                   <li>! Updated files (style.css, rtl.css, scripts.js)</li>
+                </ul>
+                <div class="gaps-2x"></div>
+				<h5 class="log-version">v1.9.0</h5>
+                <span class="log-date">11/14/2019</span>
+                <ul class="log-list">
+                   <li>+ 1 New Landing Page Added (@crocus-multi)</li>
+				   <li>+ 3 Other Pages Added (@about-v2 @wallet-v2 @download)</li>
+				   <li>!+ Signup/Signin popup scrolling issues fixed.</li>
+                   <li>! Updated files (style.css, rtl.css, scripts.js)</li>
+                </ul>
+                <div class="gaps-3x"></div>
+				<h5 class="log-version">v1.8.0</h5>
+                <span class="log-date">10/19/2019</span>
+                <ul class="log-list">
+                   <li>+ 2 New Landing Page Added (@linum-wallet @flax-wallet)</li>
+                   <li>! Updated files (style.css, rtl.css, vendor.bundle.css, scripts.js, charts.js, jquery.bundle.js)</li>
+                </ul>
+                <div class="gaps-3x"></div>
+                <h5 class="log-version">v1.7.0</h5>
+                <span class="log-date">10/10/2019</span>
+                <ul class="log-list">
+                   <li><strong class="text-danger">Caution: This is a major release as old template fully re-coded.</strong></li>
+                    <li>+ 12 old landing page re-code to make compatitable with new version.<br>
+                     <small>@zinnia, @salvia, @lungwort, @jasmine, @lobelia, @muscari, @lavender, @azure, @azure-pro, @dark, @dark-pro, @light</small></li>
+                    <li>+ New Preset added for re-coded landing page.</li>
+                    <li>+ 68 New Block base design added for multi-purpose use.</li>
+                    <li>+ Video backaground supported as banner or any block background (Youtube Only)</li>
+                    <li>! Updated whole assets files including images, css and javascript.</li>
+                    <li>! Removed lagecy version landing page (ico-crypto-landing-v1.4)</li>
+                </ul>
+                <div class="gaps-3x"></div>
+                <h5 class="log-version">v1.6.1</h5>
+                <span class="log-date">06/11/2019</span>
+                <ul class="log-list">
+                    <li>+ New Blocks Added (@banner @team @footer @faqs @roadmap @partners @token @features-panel @features-card @contact)</li>
+                    <li>! Updated files (style.css, rtl.css azalea.css, vendor.bundle.css, scripts.js)</li>
+                </ul>
+                <div class="gaps-3x"></div>
+                <h5 class="log-version">v1.6.0</h5>
+                <span class="log-date">03/15/2019</span>
+                <ul class="log-list">
+                    <li>+ 2 New Landing Page Added (@azalea-dark @azalea-multi)</li>
+                    <li>! Updated files (style.css, rtl.css azalea.css, vendor.bundle.css, scripts.js, charts.js, jquery.bundle.js)</li>
+                </ul>
+                <div class="gaps-3x"></div>
+                <h5 class="log-version">v1.5.0</h5>
+                <span class="log-date">02/09/2019</span>
+                <ul class="log-list">
+                    <li>+ 3 New Landing Page Added (@gentian-multi, @gentian-dark, @gentian-pro)</li>
+                    <li>+ 50 Other Pages Added</li>
+                </ul>
+                <div class="gaps-3x"></div>
+                <h5 class="log-version">v1.0.0</h5>
+                <span class="log-date">03/02/2018</span>
+                <ul class="log-list">
+                    <li>Initial Release</li>
+                </ul>
+            </div>
+            <div class="gaps-5x"></div>
+            <!-- End #credits -->
+        </div>
+    </div>
+    
+	<!-- JavaScript (include all script here) -->
+	<script src="assets/js/jquery.bundle.js?ver=100"></script>
+	<script src="assets/js/prettify.js"></script> 
+	
+	<script>
+        window.prettyPrint && prettyPrint();
+        
+    </script>
+	
+</body>
+</html>

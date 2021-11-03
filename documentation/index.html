@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Softnio">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="TokenWiz is a modern and clean admin template for ICO Dashboard.">
+	<!-- Fav Icon  -->
+	<link rel="shortcut icon" href="images/favicon.png">
+	<!-- Site Title  -->
+	<title>Documentation | ICO Crypto - ICO Landing Page &amp; Multi-Purpose Cryptocurrency HTML Template</title>
+	<!-- Vendor Bundle CSS -->
+	<link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=100">
+	<link rel="stylesheet" href="assets/css/prettify.css">
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="assets/css/style.css?ver=100">
+
+	<style>
+        .section{
+            padding: 20px 0 0;
+        }
+        a{
+            color: #304073;
+        }
+        a:hover,a:focus,a:active{
+            color: #2b56f5;
+        }
+        h1,h2,h3,h4,h5,h6,p.lead{
+            color: #304073;
+            margin-bottom: 8px;
+        }
+        p,span{
+            color: #6783b8;
+        }
+        .doc-topbar{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 10px 0;
+            background: #fff;
+            box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.02);
+        }
+        .doc-logo{
+            height: 40px;
+            display: block;
+        }
+        .doc-logo img{
+            height: 40px;
+        }
+        .doc-topbar-info ul{
+            margin: 0 -15px;
+        }
+        .doc-topbar-info ul li{
+            font-size: 13px;
+            padding: 0 15px;
+        }
+        .doc-sidebar{
+            position: fixed;
+            top: 0;
+            width: 260px;
+            border-radius: 4px;
+            padding: 15px 0;
+            margin-top: 90px;
+            background: #fff;
+            max-height: calc(100vh - 120px);
+            box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.07);
+        }
+        .doc-sidebar-head{
+            color: #304073;
+            margin:15px 0 5px;
+            padding: 0 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .doc-sidebar-nav{
+            padding: 0 20px;
+        }
+        .doc-sidebar-nav li{
+            padding: 5px 0;
+        }
+        .doc-sidebar-nav li a{
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            font-weight: 400;
+            color: #6783b8;
+            display: block;
+        }
+        .doc-sidebar-nav li a:hover,.doc-sidebar-nav li a:focus,.doc-sidebar-nav li a:active,.doc-sidebar-nav li.active a{
+            color: #2b56f5;
+        }
+        .doc-content{
+            margin-left: 310px;
+        }
+        .doc-content{
+        }
+        .doc-file-list{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .doc-file-list li{
+            font-weight: 400;
+            width: 33.33%;
+        }
+        ol li{
+            list-style: decimal;
+        }
+        .doc-ol li{
+            list-style-position: inside;
+            font-weight: 400;
+        }
+        .lang-html,.lang-css,.lang-js{
+            overflow-x: hidden;
+        }
+    </style>
+	
+</head>
+
+<body class="admin-dashboard-demo">
+    
+    <div class="doc-topbar">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="div">
+                    <a class="doc-logo" href="./"><img src="images/logo.png" alt="logo"></a>
+                </div>
+                <div class="doc-topbar-info d-none d-md-block">
+                    <ul class="d-flex align-items-center">
+                        <li>Version: <strong>1.9.3</strong></li>
+                        <li>Updated: 05/05/2021</li>
+                        <li>By: <a href="https://softnio.com" target="_blank">Softnio</a></li>
+                        <li><a target="_blank" href="http://demo.themenio.com/ico/" class="btn btn-sm btn-primary">Demo Preview</a></li>
+                    </ul>
+                </div>
+                <div class="d-md-none">
+                    <a href="#" class="doc-menu-toggler"><em class="ti ti-align-right"></em></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="docSidebar" class="doc-sidebar">
+            <div>
+                <ul class="doc-sidebar-nav">
+                    <li><a class="to-section" href="#introduction">Introduction</a></li>
+                    <li><a class="to-section" href="#getStarted">Geting Started</a></li>
+                    <li><a class="to-section" href="#htmlStructure">HTML Files &amp; Structure</a></li>
+                    <li><a class="to-section" href="#cssStructure">CSS Files &amp; Structure</a></li>
+                    <li><a class="to-section" href="#jsStructure">JavaScript Files &amp; Structure</a></li>
+                    <li><a class="to-section" href="#others">Others</a></li>
+                    <li><a class="to-section" href="#credits">Sources and Credits</a></li>
+                    <li><a class="to-section" href="changeslog.html">Changes Log</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="doc-content">
+            <div id="introduction" class="section" style="padding-top: 110px">
+                <h3>ICO Crypto - ICO Landing Page &amp; Multi-Purpose Cryptocurrency HTML Template + User Dashboard</h3>
+                <ul class="d-flex guttar-20px align-items-center d-md-none">
+					<li>Version: <strong>1.9.3</strong></li>
+					<li>Updated: 05/05/2021</li>
+					<li>By: <a href="https://softnio.com" target="_blank">Softnio</a></li>
+                </ul>
+                <div class="gaps-1x"></div>
+                <p class="lead">ICO Crypto is a modern and elegant landing page, created for ICO Agencies and digital crypto currency investment website.</p>
+                <p>ICO Crypto is based on Bootstrap 4, So it give you more flexible for customize. All files are clearly organised we believe it will be easy to use and edit them. Design is very clean, elegant and modern. Any one can customize this template as his wishes.</p>
+                <div class="gaps-2x"></div>
+                <div class="card no-hover-shadow">
+                    <div class="card-innr pd-2x">
+                        <p class="lead">
+                        Thank you for purchasing our ICO Crypto Landing HTML Template. If you have any questions that are beyond the scope of this help file, please feel free to email via my <a target="_blank" href="https://themeforest.net/user/softnio#contact">user profile</a> contact form here. Thanks so much!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End #introduction -->
+            
+            <div id="getStarted" class="section">
+                <h2>Geting Started</h2>
+                <p>In our package folder you will see a file called <code> _blank.html,</code> Just duplicate this page and start adding your content.</p>
+                <p>Please check our elements page for styled html elements and pre-build components. Also all shorts of pages designed specily for ico management system, you can also start with pre-build pages and edit them as you see fit.</p>
+                <div class="gaps-1x"></div>
+                <div class="card no-hover-shadow">
+                    <div class="card-innr pd-2x">
+                        <p class="text-dark"><strong>We're introducing new version (v1.5 or latest) of ICO Crypto Template. In this version we re-coded the new new template and it availabel fully separate. New template codes are more flexiable, re-usable, light-weight and specially block based design structure.</strong></p>
+                        <p class="text-danger lead"><strong>So please don't update your existing site code if you using any version before v1.5.0</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- End #getStarted -->
+            
+            <div id="htmlStructure" class="section">
+                <h2>HTML Files &amp; Structure</h2>
+                
+                <h5>V 1.5.0 <small>(New 50 files)</small></h5>
+                <ul class="doc-file-list">
+                    <li>index.html</li>
+                    <li>index-gentian.html</li>
+                    <li>index-gentian-pro.html</li>
+                    <li>index-gentian-multi.html</li>
+                    <li>index-gentian-multi-woa.html</li>
+                    <li>index-gentian-woa.html</li>
+                    <li>index-gentian-pro-woa.html</li>
+                    <li>page-about.html</li>
+                    <li>page-contact.html</li>
+                    <li>page-faq.html</li>
+                    <li>page-features.html</li>
+                    <li>page-wallets.html</li>
+                    <li>page-login.html</li>
+                    <li>page-register.html</li>
+                    <li>page-reset.html</li>
+                    <li>page-login-v2.html</li>
+                    <li>page-register-v2.html</li>
+                    <li>page-reset-v2.html</li>
+                    <li>page-roadmap.html</li>
+                    <li>page-team.html</li>
+                    <li>page-token-sale.html</li>
+                    <li>blog-3clmn.html</li>
+                    <li>blog-sidebar-right.html</li>
+                    <li>blog-sidebar-left.html</li>
+                    <li>blog-details.html</li>
+                    <li>blog-details-full.html</li>
+                    <li>element-accordian.html</li>
+                    <li>element-alert.html</li>
+                    <li>element-button.html</li>
+                    <li>element-chart.html</li>
+                    <li>element-color.html</li>
+                    <li>element-content.html</li>
+                    <li>element-countdown.html</li>
+                    <li>element-form.html</li>
+                    <li>element-grid.html</li>
+                    <li>element-modal.html</li>
+                    <li>element-notification.html</li>
+                    <li>element-progress-bar.html</li>
+                    <li>element-tab.html</li>
+                    <li>element-table.html</li>
+                    <li>element-video.html</li>
+                    <li>element-typography.html</li>
+                    <li>block-ath.html</li>
+                    <li>block-banner.html</li>
+                    <li>block-contact.html</li>
+                    <li>block-faq.html</li>
+                    <li>block-feature-card.html</li>
+                    <li>block-feature-panel.html</li>
+                    <li>block-footer.html</li>
+                    <li>block-navbar.html</li>
+                    <li>block-page-header.html</li>
+                    <li>block-partner.html</li>
+                    <li>block-roadmap.html</li>
+                    <li>block-subscribe.html</li>
+                    <li>block-team.html</li>
+                    <li>block-token-info.html</li>
+                    <li>_blank.html</li>
+                </ul>
+                <h5>V 1.6.0 <small>(4 New files)</small></h5>
+                <ul class="doc-file-list">
+                    <li>index-azalea.html</li>
+                    <li>index-azalea-woa.html</li>
+                    <li>index-azalea-multi.html</li>
+                    <li>index-azalea-multi-woa.html</li>
+                </ul>
+                <h5>V 1.6.1 <small>(Additional Block Added)</small></h5>
+                <ul class="doc-file-list">
+                    <li>block-banner.html</li>
+                    <li>block-contact.html</li>
+                    <li>block-faq.html</li>
+                    <li>block-feature-card.html</li>
+                    <li>block-feature-panel.html</li>
+                    <li>block-footer.html</li>
+                    <li>block-partner.html</li>
+                    <li>block-roadmap.html</li>
+                    <li>block-team.html</li>
+                    <li>block-token-info.html</li>
+                </ul>
+                <h5>V 1.7.0 <small>(26 New files)</small></h5>
+                <ul class="doc-file-list">
+                    <li>index-gentian-video.html</li>
+                    <li>index-zinnia.html</li>
+                    <li>index-zinnia-woa.html</li>
+                    <li>index-salvia.html</li>
+                    <li>index-salvia-woa.html</li>
+                    <li>index-lungwort.html</li>
+                    <li>index-lungwort-woa.html</li>
+                    <li>index-jasmine.html</li>
+                    <li>index-jasmine-woa.html</li>
+                    <li>index-lobelia.html</li>
+                    <li>index-lobelia-woa.html</li>
+                    <li>index-muscari.html</li>
+                    <li>index-muscari-woa.html</li>
+                    <li>index-lavender.html</li>
+                    <li>index-lavender-woa.html</li>
+                    <li>index-azure-pro.html</li>
+                    <li>index-azure-pro-woa.html</li>
+                    <li>index-azure.html</li>
+                    <li>index-azure-woa.html</li>
+                    <li>index-dark-pro.html</li>
+                    <li>index-dark-pro-woa.html</li>
+                    <li>index-dark.html</li>
+                    <li>index-dark-woa.html</li>
+                    <li>index-light.html</li>
+                    <li>index-light-woa.html</li>
+                    <li>element-icon.html</li>
+                </ul>
+                <h5>V 1.8.0 <small>(2 New files)</small></h5>
+                <ul class="doc-file-list">
+                    <li>index-linum-wallet.html</li>
+					<li>index-flax-wallet.html</li>
+				</ul>
+				<h5>V 1.9.0 <small>(4 New files)</small></h5>
+                <ul class="doc-file-list">
+                    <li>index-crocus-multi.html</li>
+					<li>page-about-v2.html</li>
+					<li>page-wallets-v2.html</li>
+					<li>page-download.html</li>
+				</ul>
+				<h5>V 1.9.1 <small>(17 New files)</small></h5>
+                <ul class="doc-file-list">
+                    <li>index-cynus-multi.html</li>
+					<li>page-about-v3.html</li>
+					<li>page-contact-v2.html</li>
+					<li>page-mission.html</li>
+					<li>page-exchange.html</li>
+					<li>page-partner.html</li>
+					<li>page-career.html</li>
+					<li>coming-soon-azalea.html</li>
+					<li>coming-soon-gentian.html</li>
+					<li>coming-soon-gentian-alt.html</li>
+					<li>coming-soon-dark.html</li>
+					<li>coming-soon-light.html</li>
+					<li>error-404-azalea.html</li>
+					<li>error-404-gentian.html</li>
+					<li>error-404-gentian-alt.html</li>
+					<li>error-404-dark.html</li>
+					<li>error-404-light.html</li>
+				</ul>
+				
+                <div class="gaps-3x"></div>
+                <div class="card no-hover-shadow">
+                    <div class="card-innr pd-3x">
+                        <p class="text-danger"><strong> 68 New blocks added in block pages </strong></p>
+                    </div>
+                </div>
+                
+                <div class="gaps-3x"></div>
+                <pre class="prettyprint lang-html linenums">            
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zxx&quot; class=&quot;js&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;Softnio&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+&lt;!-- Fav Icon&nbsp; --&gt;
+&lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon.png&quot;&gt;
+&lt;!-- Site Title&nbsp; --&gt;
+&lt;title&gt;ICO Crypto - ICO Landing Page &amp;amp; Multi-Purpose Cryptocurrency HTML Template&lt;/title&gt;
+&lt;!-- Bundle and Base CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/vendor.bundle.css?ver=150&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/style.css?ver=150&quot;&gt;
+&lt;!-- Color Scheme CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/theme.css?ver=150&quot; id=&quot;theming&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;nk-body body-wider bg-light&quot;&gt;
+&nbsp; &nbsp; &lt;div class=&quot;nk-wrap&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;header class=&quot;nk-header page-header is-transparent is-sticky&quot; id=&quot;header&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Banner @s --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;header-banner&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;nk-banner&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;banner banner-fs banner-single&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;banner-wrap&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;container&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;row align-items-center justify-content-center&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- .row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- .nk-banner --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- .header-banner @e --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/header&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;main class=&quot;nk-pages&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;section class=&quot;section section-l bg-light&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;container&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Section Head @s --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;section-head text-center wide-auto&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- .section-head @e --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Block @s --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;nk-block&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;row justify-content-center&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- .row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Block @r --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/section&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- // --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;section class=&quot;section section-l bg-white&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;container&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Section Head @s --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;section-head text-center wide-auto&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- .section-head @e --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Block @s --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;nk-block&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;row&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- .row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&lt;!-- .block @e --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/section&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/main&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;footer class=&quot;nk-footer bg-theme-grad&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;section class=&quot;section no-pdy section-contact bg-transparent&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/section&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;section class=&quot;section section-footer section-l tc-light bg-transparent&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/section&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/footer&gt;
+&nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &lt;div class=&quot;preloader&quot;&gt;&lt;span class=&quot;spinner spinner-round&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;!-- JavaScript --&gt;
+&lt;script src=&quot;assets/js/jquery.bundle.js?ver=150&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/scripts.js?ver=150&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/charts.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&nbsp;
+                </pre>
+
+            </div>
+            <!-- End #htmlStructure -->
+            
+            <div id="cssStructure" class="section">
+                <h2>CSS Files &amp; Structure</h2>
+                <p>All CSS are located in the "assets/css" folder of the template. Each CSS File is well commented and easy to use and customize to your own needs. Here's the list of the CSS files:</p>
+                <h5><strong>Third-Party Vendor</strong></h5>
+                <ol class="doc-ol">
+                    <li>bootstrap</li>
+                    <li>font-awesome</li>
+                    <li>themify-icons</li>
+                    <li>magnific-popup</li>
+                    <li>select2</li>
+                    <li>owlcarousel</li>
+                </ol>
+                <h5><strong>Used Files</strong></h5>
+                <ol class="doc-ol">
+                    <li>vendor.bundle.css</li>
+                    <li>style.css</li>
+                    <li>theme.css</li>
+                </ol>
+                
+                <h5 id="color-preset"><strong>10 Extra Color Preset <small> added on v1.7.0 </small></strong></h5>
+                <ol class="doc-ol">
+                    <li>style-azalea.css</li>
+                    <li>style-zinnia.css</li>
+                    <li>style-salvia.css</li>
+                    <li>style-lungwort.css</li>
+                    <li>style-jasmine.css</li>
+                    <li>style-lobelia.css</li>
+                    <li>style-muscari.css</li>
+                    <li>style-lavender.css</li>
+                    <li>style-azure.css</li>
+                    <li>style-dark.css</li>
+                </ol>
+                <div class="gaps-3x"></div>
+                <div class="card no-hover-shadow">
+                    <div class="card-innr pd-3x">
+                        <p class="text-danger"><strong> To use above presets, at first keep a backup of your main 'stlye.css' file and then rename your preferred stylsheet with a name of (style.css).</strong></p>
+                    </div>
+                </div>
+                <div class="gaps-3x"></div>
+                <pre class="prettyprint lang-css linenums">
+/*!
+ * Theme Name: ICOCrypto
+ * Author: Softnio
+ * Author URI: http://themeforest.net/user/softnio
+ * Version: 1.5.0
+ * Updated: 02.09.2019
+**/
+/**
+----------------------
+## TABLE CONTNETS ##
+01. Fonts
+02. Utilities
+--  02.1 Reset
+--  02.2 Spacing
+--  02.3 Colors
+--  02.4 Misc
+03. Elements
+--  03.1 Buttons
+04. Components
+05. Layouts
+06. Override
+---------------------- **/
+/** IMPORTANT NOTE: DO NOT Edit this file. Best to write own code in css/custom.css file. It will helps you to easy update of the template. */
+/** 01. Fonts */
+@font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Light.eot"); src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Regular.eot"); src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Medium.eot"); src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Bold.eot"); src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
+/** 02. Utilities */
+/** 02.1 Reset */
+html, body { font-family: "Roboto", sans-serif; color: #415076; font-size: 14px; line-height: 1.6; font-weight: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+@media (min-width: 576px) { html, body { font-size: 16px; line-height: 1.6; font-weight: 300; } }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section { display: block; }
+
+*[hidden] { display: none; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote::after, blockquote::before, q::after, q::before { content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { color: #1940b0; font-weight: 500; font-family: "Roboto", sans-serif; line-height: 1.3; margin-bottom: 0.5rem; }
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, .h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .h5:last-child, .h6:last-child { margin-bottom: 0; }
+.tc-light h1, .tc-light a:not(.btn) h1, .tc-light h2, .tc-light a:not(.btn) h2, .tc-light h3, .tc-light a:not(.btn) h3, .tc-light h4, .tc-light a:not(.btn) h4, .tc-light h5, .tc-light a:not(.btn) h5, .tc-light h6, .tc-light a:not(.btn) h6, .tc-light .h1, .tc-light a:not(.btn) .h1, .tc-light .h2, .tc-light a:not(.btn) .h2, .tc-light .h3, .tc-light a:not(.btn) .h3, .tc-light .h4, .tc-light a:not(.btn) .h4, .tc-light .h5, .tc-light a:not(.btn) .h5, .tc-light .h6, .tc-light a:not(.btn) .h6 { color: #fff; }
+
+p { margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+ul, ol, table { margin: 0; padding: 0; }
+
+strong, b { font-weight: 500; }
+
+a { outline: 0; transition: all 0.5s; color: #16a3fe; }
+a:link, a:visited { text-decoration: none; }
+a:hover, a:focus, a:active { outline: 0; color: #23c99d; }
+
+img { max-width: 100%; height: auto; }
+
+h1, .h1, .fz-1 { font-size: 2.75rem; }
+
+h2, .h2, .fz-2 { font-size: 2.25rem; }
+
+h3, .h3, .fz-3 { font-size: 1.87rem; }
+
+h4, .h4, .fz-4 { font-size: 1.6rem; }
+
+h5, .h5, .fz-5 { font-size: 1.2rem; }
+
+h6, .h6, .fz-6 { font-size: 0.94rem; }
+                </pre>
+                
+            </div>
+            <!-- End #cssStructure -->
+            <div id="jsStructure" class="section">
+                <h2>JavaScript Files &amp; Structure</h2>
+                <p>All JS are located in the "assets/js" folder of the template. Each JS File is well commented and easy to use and customize to your own needs. Here's the list of the JS files:</p>
+                <h5><strong>Third-Party Vendor</strong></h5>
+                <ol class="doc-ol">
+                    <li>jquery</li>
+                    <li>bootstrap</li>
+                    <li>jquery easing</li>
+                    <li>jquery countdown</li>
+                    <li>select2</li>
+                    <li>magnific-popup</li>
+                    <li>chart js</li>
+                    <li>form plugin</li>
+                    <li>form validation</li>
+                    <li>owlcarousel</li>
+                    <li>jquery scrollify</li>
+                    <li>particles</li>
+                    <li>toastr</li>
+                    <li>waypoint</li>
+                </ol>
+                <h5><strong>Used Files</strong></h5>
+                <ol class="doc-ol">
+                    <li>jquery.bundle.js</li>
+                    <li>toastr.examples.js</li>
+                    <li>charts.js</li>
+                    <li>script.js</li>
+                </ol>
+                <div class="gaps-3x"></div>
+                <pre class="prettyprint lang-js linenums">
+/*!
+&nbsp;* ICOCrypto v1.5.0 by Softnio.
+**/
+var NioApp = (function (jQ, win, doc){
+&nbsp; &nbsp; &quot;use strict&quot;;
+&nbsp; &nbsp; var NioApp = {AppInfo: {name: &quot;ICOCrypto&quot;, package: &quot;1.5.0&quot;, version: &quot;1.0.1&quot;, author: &quot;Softnio&quot;} },
+&nbsp; &nbsp; &nbsp; &nbsp; components = {docReady: [], docReadyDefer: [], winLoad: [], winLoadDefer: []};
+&nbsp;
+&nbsp; &nbsp; jQ(doc).ready(docReady);
+&nbsp; &nbsp; jQ(win).on(&quot;load&quot;, winLoad);
+&nbsp;
+&nbsp; &nbsp; NioApp.components&nbsp; &nbsp;= components;
+&nbsp; &nbsp; NioApp.docReady <span style="white-space:pre"> </span>= docReady;
+&nbsp; &nbsp; NioApp.winLoad&nbsp; &nbsp; <span style="white-space:pre"> </span>= winLoad;
+&nbsp;
+&nbsp; &nbsp; return NioApp;
+}(jQuery, window, document));
+&nbsp;
+NioApp = function (NioApp, $, window, document) {
+&nbsp; &nbsp; &quot;use strict&quot;;
+// Defined Variables
+&nbsp; &nbsp; var $win<span style="white-space:pre"> </span>= $(window),&nbsp;&nbsp;
+// is exists @v1.0
+$.fn.exists = function () {
+&nbsp; &nbsp; &nbsp; &nbsp; return this.length &gt; 0;
+&nbsp; &nbsp; };
+&nbsp; &nbsp; NioApp.components.docReady.push(NioApp.Util.classInit);
+&nbsp;
+&nbsp; &nbsp; // PreLoader !Util @v1.0
+&nbsp; &nbsp; NioApp.Util.preLoader = function () {
+var $preloader <span style="white-space:pre"> </span>= $(&#39;.preloader&#39;),
+$spinner <span style="white-space:pre"> </span>= $(&#39;.spinner&#39;);
+&nbsp;
+if ($preloader.exists()) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $body.addClass(&quot;page-loaded&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $spinner.fadeOut(300);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $preloader.delay(600).fadeOut(300);
+&nbsp; &nbsp; &nbsp; &nbsp; }
+};
+&nbsp; &nbsp; // Browser Check !Util @v1.0
+&nbsp; &nbsp; NioApp.Util.browser = function() {
+&nbsp; &nbsp; &nbsp; &nbsp; var isChrome = !!window.chrome,&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; isFirefox = typeof InstallTrigger !== &#39;undefined&#39;,
+&nbsp; &nbsp; &nbsp; &nbsp; isIE = /*@cc_on!@*/false || !!document.documentMode,&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; isEdge = !isIE &amp;&amp; !!window.StyleMedia,&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; isOpera = (!!window.opr &amp;&amp; !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(&#39; OPR/&#39;) &gt;= 0,
+&nbsp; &nbsp; &nbsp; &nbsp; isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === &quot;[object SafariRemoteNotification]&quot;; })(!window[&#39;safari&#39;] || (typeof safari !== &#39;undefined&#39; &amp;&amp; safari.pushNotification));
+&nbsp; &nbsp; &nbsp; &nbsp; if(isChrome == true) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $body.addClass(&#39;chrome&#39;);
+&nbsp; &nbsp; &nbsp; &nbsp; } else if (isFirefox){
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $body.addClass(&#39;firefox&#39;);
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+return NioApp;
+}(NioApp, jQuery, window, document);
+/* END @iO*/
+                </pre>
+            </div>
+            <!-- End #jsStructure -->
+
+            <div id="others" class="section">
+                <h2>How to Set Email Address for Form Important</h2>
+                <div class="gaps-1x"></div>
+                <p>First open the php file located into form folder. Files are 'contact.php', 'subscribe.php'. On the file you will saw bellow code. Just update your sitename, your email and name. If you want to add multiple email then just duplicate the line '$emailTO[] = array...' and add another email.</p>
+                <div class="gaps-1x"></div>
+                <pre class="prettyprint lang-php linenums">
+// Enter Your Sitename
+$sitename = 'your site';
+
+// Enter your email addresses: @required
+$emailTO[] = array( 'email' =&gt; 'your mail', 'name' =&gt; 'your name' );</pre>
+                <div class="gaps-1x"></div>
+                <h6>If you want to add BCC / CC email address then just enable below line and update same way as email too.</h6>
+                <div class="gaps-1x"></div>
+                <pre class="prettyprint lang-php linenums">
+//$emailBCC[] = array( 'email' =&gt; 'email@yoursite.com', 'name' =&gt; 'Your Name' );
+//$emailCC[] = array( 'email' =&gt; 'email@yoursite.com', 'name' =&gt; 'Your Name' );</pre>
+                <div class="gaps-1x"></div>
+                <h6>If you want to use SMTP, please enable bellow line of code and upate with your smtp information.</h6>
+                <div class="gaps-1x"></div>
+                <pre class="prettyprint lang-php linenums">
+//$mail-&gt;isSMTP();
+//$mail-&gt;SMTPDebug = 0;
+//$mail-&gt;Host = 'smtp_host';
+//$mail-&gt;Port = 587;
+//$mail-&gt;SMTPAuth = true;
+//$mail-&gt;Username = 'smtp_user_name';
+//$mail-&gt;Password = 'smtp_pass';</pre>
+                <div class="gaps-3x"></div>
+                <h2>How To Use RTL Version</h2>
+                <div class="gaps-1x"></div>
+                <p>ICO Crypro supports RTL mode, You can use this for your RTL mode project. Here is the instruction for uses of RTL mode.</p>
+                <p>For use RTl, You just need to copy HTML files from folder of "rtl-html" and paste into your "main-html" folder. Remember it will ask you to replace existing HTML files, so if you do this you will loose reguler html version, please take a backup before this action</p>
+                <p class="text-danger"><strong>Caution : if you try to open HTMl file from "rtl-html" folder, then it will not work, these file only works when it open from "root/main-html" folder.</strong></p>
+                <div class="gaps-3x"></div>
+                <h2>How To Use on Scroll Animation</h2>
+                <div class="gaps-1x"></div>
+                    <p>At first add a class <code>.animated</code> to your elmement. Then add <code>data-animate="fadeInUp"</code>, <code>data-animate="fadeInDown"</code>, <code>data-animate="fadeInLeft"</code>, <code>data-animate="fadeInRight"</code> For animation direction. Also use <code>data-delay=".3"</code> for animation start delay time.</p>
+                <div class="gaps-3x"></div>
+                <h2>How To Add or Remove Particale</h2>
+                <div class="gaps-1x"></div>
+                    <p>To add particale just use div with a class <code>.particles-bg</code> and give it an id <code>any-id-you-want</code></p>
+                    <p>Also if you want to remove a particale then just find a div containing class <code>.particles-bg</code> and remove that element.</p>
+                <div class="gaps-3x"></div>
+            </div>
+            <!-- End #credits -->
+
+            <div id="credits" class="section">
+                <h2>Sources and Credits</h2>
+                <div class="gaps-1x"></div>
+                
+                <div class="card no-hover-shadow">
+                    <div class="card-innr pd-3x">
+                        <ul class="doc-file-list">
+                            <li><a href="https://jquery.com/">jQuery</a></li>
+                            <li><a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery easing</a></li>
+                            <li><a href="http://getbootstrap.com/">BootStrap</a></li>
+                            <li><a href="http://hilios.github.io/jQuery.countdown/">Final CountDown</a></li>
+                            <li><a href="https://github.com/select2/select2">Select 2</a></li>
+                            <li><a href="http://dimsemenov.com/plugins/magnific-popup/">Magnific Popup</a></li>
+                            <li><a href="https://www.chartjs.org/">Chart JS</a></li>
+                            <li><a href="https://fonts.google.com/specimen/Roboto">Google Font (Roboto)</a></li>
+                            <li><a href="https://fontawesome.com/">FontAwesome Free</a></li>
+                            <li><a href="https://themify.me/themify-icons">Themify Icons</a></li>
+                            <li><a href="https://github.com/CodeSeven/toastr">Toastr</a></li>
+                            <li><a href="https://jqueryvalidation.org/">jQuery Validation</a></li>
+                            <li><a href="https://owlcarousel2.github.io/OwlCarousel2/">Owl carousel</a></li>
+                            <li><a href="https://github.com/VincentGarreau/particles.js/">particles JS</a></li>
+                            <li><a href="https://github.com/CodeSeven/toastr">Toastr Notification</a></li>
+                            <li><a href="http://imakewebthings.com/waypoints/">Waypoint JS</a></li>
+							<li><a href="http://imakewebthings.com/waypoints/">Datatable JS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gaps-5x"></div>
+            </div>
+            <!-- End #credits -->
+
+        </div>
+    </div>
+    
+	<!-- JavaScript (include all script here) -->
+	<script src="assets/js/jquery.bundle.js?ver=100"></script>
+	<script src="assets/js/prettify.js"></script> 
+	
+	<script>
+        window.prettyPrint && prettyPrint();
+        
+        $('a.to-section[href*="#"]:not([href="#"])').on("click", function(e) {
+            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+                var toHash = $(this.hash), toHashN = (this.hash.slice(1)) ? $('[name=' + this.hash.slice(1) + ']') : false, offset = 85;
+
+                toHash = toHash.length ? toHash : toHashN;
+                if (toHash.length) {
+                    $('html, body').animate({
+                        scrollTop: (toHash.offset().top - offset)
+                    }, 1000);
+                    e.preventDefault();
+                }
+            }
+            var self= $(this);
+            $('.to-section').parent().removeClass('active');
+            self.parent().addClass('active');
+            e.preventDefault();
+        });
+        
+        
+    </script>
+	
+</body>
+</html>
