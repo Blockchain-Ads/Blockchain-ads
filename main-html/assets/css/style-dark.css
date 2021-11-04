@@ -954,8 +954,8 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 .nk-df-shape-h, .shape-h:after, .shape-h-bg { background-image: url(../images/shape-h.png); }
 
 .nk-df-shape-h-sm, .shape-h-sm:after, .shape-h-sm-bg { background-image: url(../images/shape-h-sm.png); }
-
-.nk-df-shape-i, .shape-i:after, .shape-i-bg { background-image: url(../images/shape-i.png); }
+/* 
+.nk-df-shape-i, .shape-i:after, .shape-i-bg { background-image: url(../images/shape-i.png); } */
 
 .nk-df-shape-i-sm, .shape-i-sm:after, .shape-i-sm-bg { background-image: url(../images/shape-i-sm.png); }
 
