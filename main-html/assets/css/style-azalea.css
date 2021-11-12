@@ -6286,7 +6286,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 @media (min-width: 1200px) { .doc-shape:before { width: 255px; height: 245px; }
   .doc-photo { max-width: 175px; } }
 
-.particles-container { position: absolute !important; top: 0; left: 0; right: 0; bottom: 0; z-index: 0 !important; }
+.particles-container { position: absolute !important; top: 0; left: 0; right: 0; bottom: 0; z-index: -1 !important; }
 
 .particles-container.is-fixed { position: fixed !important; z-index: -1 !important; }
 
