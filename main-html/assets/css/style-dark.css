@@ -5696,7 +5696,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 [class*="col-"] > .partner-logo { padding: 0; }
 
-.partner-logo img { max-height: 30px; max-width: 100%; width: auto !important; margin-left: auto; margin-right: 0; }
+.partner-logo img { max-height: 50px; max-width: 100%; width: auto !important; margin-left: auto; margin-right: 0; }
 
 .has-carousel .partner-logo img { margin-right: auto; }
 
