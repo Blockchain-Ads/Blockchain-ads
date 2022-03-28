@@ -1,5 +1,5 @@
 /** DropZone **/
-.dz-clickable { background: #f3f8ff; border: 1px dashed #d3e0f3; border-radius: 4px; padding: 20px 0 30px; text-align: center; }
+.dz-clickable { border: 1px dashed #d3e0f3; border-radius: 4px; padding: 20px 0 30px; text-align: center; }
 .dz-message span { display: block; color: rgba(103, 131, 184, 0.6); }
 .dz-message-text { font-size: 13px; }
 .dz-message-or { font-size: 16px; margin-bottom: 4px; text-transform: uppercase; }
@@ -21,3 +21,7 @@
 .dz-success .dz-success-mark { display: block; }
 
 .upload-title { color: #6783b8; display: block; font-size: 14px; padding-bottom: 8px; font-weight: 500; }
+.dropzone {
+    margin-top: 20px;
+    border: 1px solid #46bdf4 !important;
+}
