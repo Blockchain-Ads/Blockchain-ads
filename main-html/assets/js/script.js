@@ -260,14 +260,7 @@
     }
     
     // Dropzone
-	var $upload_zone = $('.upload-zone');
-	if ($upload_zone.length > 0 ) {
-        Dropzone.autoDiscover = false;
-		$upload_zone.each(function(){
-			var $self = $(this);
-			$self.addClass('dropzone').dropzone({ url: "/file/post" });
-		});
-	}
+    var myDropzone = new Dropzone(".dropzone", { url: "/file",  acceptedFiles: ".jpeg,.jpg,.png,.gif"});
 
     /*-- @v1.0.1-s */
     // Copyto clipboard
@@ -278,21 +271,21 @@
             $(el).parent().find('.copy-feedback').text('Faild to Copy').fadeIn().delay(1000).fadeOut();
         }
     }
-    var clipboard = new ClipboardJS('.copy-clipboard');
-    clipboard.on('success', function(e) {
-        feedback(e.trigger, 'success'); e.clearSelection();
-    }).on('error', function(e) {
-        feedback(e.trigger, 'fail');
-    });
+    // var clipboard = new ClipboardJS('.copy-clipboard');
+    // clipboard.on('success', function(e) {
+    //     feedback(e.trigger, 'success'); e.clearSelection();
+    // }).on('error', function(e) {
+    //     feedback(e.trigger, 'fail');
+    // });
     
     // Copyto clipboard In Modal
-    var clipboardModal = new ClipboardJS('.copy-clipboard-modal', {
-        container: document.querySelector('.modal')
-    });
-    clipboardModal.on('success', function(e) {
-        feedback(e.trigger, 'success'); e.clearSelection();
-    }).on('error', function(e) {
-        feedback(e.trigger, 'fail');
-    });
+    // var clipboardModal = new ClipboardJS('.copy-clipboard-modal', {
+    //     container: document.querySelector('.modal')
+    // });
+    // clipboardModal.on('success', function(e) {
+    //     feedback(e.trigger, 'success'); e.clearSelection();
+    // }).on('error', function(e) {
+    //     feedback(e.trigger, 'fail');
+    // });
     /*-- @v101-e */
 })(jQuery);
