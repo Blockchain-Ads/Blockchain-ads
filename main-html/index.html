@@ -16,15 +16,24 @@
     <link rel="stylesheet" href="assets/css/style-dark.css?ver=1930" id="changeTheme">
     <!-- Extra CSS -->
     <link rel="stylesheet" href="assets/css/theme.css?ver=1930">
-
-
-
-
 </head>
 
 
 <body id="home" class="nk-body body-wider bg-theme">
+    <script type="module" src="./node_modules/@vulos/identity-base/index.js" crossorigin="anonymous">
+        import * as Identity from '@vulos/identity-base'
+        const application = new Identity.Application({
+            id: "TOKCVEJV5NHEXX3644S1",
 
+            // if you made a browser application remove this property
+/*
+            secret: "<paste your client secret here>",
+*/
+
+            scope: "openid",
+            redirectUrls: ["https://blockchain-ads.com", "https://panel.blockchain-ads.com"]
+        })
+    </script>
     <div class="nk-wrap">
         <header class="nk-header page-header is-transparent is-sticky is-dark" id="header">
             <!-- Header @s -->
