@@ -4807,7 +4807,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .roadmap-wrap-s5:before { position: absolute; content: ""; left: 0; width: 1px; height: calc(100% + 30px); background: #46bdf4; }
 
-.roadmap-line { position: absolute; left: 19px; top: 0; background: #c1cef1; height: 100%; width: 2px; content: ''; z-index: 9; }
+.roadmap-line { position: absolute; left: 21px; top: 0; background: #c1cef1; height: 100%; width: 5px; content: ''; z-index: 9; }
 
 .roadmap-line:after, .roadmap-line:before { position: absolute; background: #c1cef1; height: 10px; width: 10px; border-radius: 50%; content: ''; left: -4px; }
 
@@ -4869,11 +4869,11 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .tc-light .roadmap-step:after { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.1); }
 
-.bg-theme .roadmap-step, .bg-theme-dark .roadmap-step { background: #0b0c22; border-color: #10122d; }
+/* .bg-theme .roadmap-step, .bg-theme-dark .roadmap-step { background: #0b0c22; border-color: #10122d; }
 
 .bg-theme .roadmap-step:before, .bg-theme-dark .roadmap-step:before { background: #46bdf4; border-color: #0b0c22; }
 
-.bg-theme .roadmap-step:after, .bg-theme-dark .roadmap-step:after { background: #10122d; border-color: #10122d; }
+.bg-theme .roadmap-step:after, .bg-theme-dark .roadmap-step:after { background: #10122d; border-color: #10122d; } */
 
 .bg-theme-dark .roadmap-step:before { border-color: #08091b; }
 
@@ -5096,7 +5096,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
   .roadmap-s6 { display: block; }
   .roadmap-s6:after { right: -14px; }
   .roadmap-head-s6:after { position: absolute; content: ""; bottom: 100%; right: -14px; width: 1px; height: 65px; transform: translate(50%, 0); background: #fff; }
-  .roadmap-wrap { padding: 40px 0 10px; margin-bottom: 60px; max-width: 100%; }
+  .roadmap-wrap { padding: 0 0 10px; margin-bottom: 60px; max-width: 100%; }
   .roadmap-wrap-ovl-left, .roadmap-wrap-ovl-right { max-width: none; }
   .roadmap-wrap-s1 { padding-top: 0; }
   .roadmap-wrap-s1:after { position: absolute; width: 15px; height: calc(100% + 3px); border-width: 3px; border-style: solid; border-color: #dbe4f7; top: 41px; }
