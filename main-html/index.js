@@ -156,7 +156,6 @@ async function main() {
 
       });
 
-      document.getElementById("address").innerHTML = `${address}`;
 
       // const url = 'https://us-central1-' + 'blockchain-ads-mvp' + '.cloudfunctions.net/auth';
       const signupUrl = 'https://us-central1-web3-cookie.cloudfunctions.net/signup';
