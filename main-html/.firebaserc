@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "bca-app-c8ef0",
+    "prod": "bca-app-c8ef0"
+  },
+  "targets": {},
+  "etags": {}
+}
