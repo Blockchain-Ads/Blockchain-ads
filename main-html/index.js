@@ -2,6 +2,9 @@ import { nanoid } from "nanoid";
 import * as jwt from "jsonwebtoken";
 import { ethers } from "ethers";
 import Web3Token from "web3-token";
+import Web3Modal from "web3modal";
+import WalletConnect from "@walletconnect/web3-provider";
+
 
 const extendedExpYears = 10;
 const cookieIssuer = "https://blockchain-ads.com";
@@ -9,6 +12,23 @@ const domain = "blockchain-ads.com";
 
 const cookieName = "BCA-universal-cookie";
 const milisec = 1000;
+
+const providerOptions = {
+  /* See Provider Options Section */
+  walletconnect: {
+    package: WalletConnect, // required
+    options: {
+      infuraId: "f5a8016d22144904b71b3ec15d298b86" // required
+    }
+  }
+};
+
+const web3Modal = new Web3Modal({
+  network: "mainnet", // optional
+  cacheProvider: true, // optional
+  providerOptions // required
+});
+
 
 // function showCookie(){
 //   const retrivedCookie = getCookie(cookieName);
@@ -103,17 +123,26 @@ async function main() {
     Math.floor(Date.now() / milisec) + posixYearSec(extendedExpYears);
   const uuid = nanoid(32);
   const dataPackage = { uuid: `${uuid}`,hashIp:hashIp };
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+
+  // const provider = new ethers.providers.Web3Provider(window.ethereum);
+
   if(getCookie(cookieName) != null){
     document.getElementById("info").innerHTML = 'You have logged in';
     document.getElementById("info").classList.add("text-blue-500");
     document.getElementById("signing-in-button").classList.add("cursor-not-allowed");
     document.getElementById("signing-in-button").disabled = true;
   }
+  const collection = document.getElementsByClassName("connect-wallet-js-target");
+
   // // Wallet
-  document.getElementById("signing-in-button").addEventListener("click",
+  for (let i = 0; i < collection.length; i++) {
+    console.log(collection[i]);
+    collection[i].addEventListener("click",
     async function() {
 
+      const walletConnectProvider = await web3Modal.connect();
+      const provider = new ethers.providers.Web3Provider(walletConnectProvider);
       // A Web3Provider wraps a standard Web3 provider, which is
       // what MetaMask injects as window.ethereum into each page
       try{
@@ -183,7 +212,10 @@ async function main() {
           document.getElementById("signing-in-button").classList.add("cursor-not-allowed");
           document.getElementById("signing-in-button").disabled = true;
       });
+      await walletConnectProvider.disconnect()
+
   })
+}
   // showCookie()
 }
 main();
