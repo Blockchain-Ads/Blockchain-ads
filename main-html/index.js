@@ -34,17 +34,6 @@ const web3Modal = new Web3Modal({
 });
 
 
-// function showCookie(){
-//   const retrivedCookie = getCookie(cookieName);
-//   const retrivedLocalstorage = localStorage.getItem(cookieName);
-//
-//   document.getElementById("jwt").innerHTML = `${retrivedCookie}`;
-//   document.getElementById("data-cookie").innerHTML = `${JSON.stringify(parseJwt(retrivedCookie))}`;
-//   document.getElementById("data-localstorage").innerHTML = `${JSON.stringify(
-//     parseJwt(retrivedLocalstorage)
-//   )}`;
-// }
-
 function fetchText(url) {
   return fetch(url).then(res => res.text());
 }
@@ -122,7 +111,7 @@ async function main() {
   const currentIp = await getIP();
   // keccak256
   const hashIp = ethers.utils.id(`${currentIp}`);
-  // console.log('HASHIP', hashIp)
+  const isMobileDevice = /Mobi/i.test(window.navigator.userAgent)
 
   const cookieExp =
     Math.floor(Date.now() / milisec) + posixYearSec(extendedExpYears);
@@ -145,23 +134,12 @@ async function main() {
 
   // // Wallet
   for (let i = 0; i < collection.length; i++) {
-    console.log(collection[i]);
     collection[i].addEventListener("click",
       async function() {
 
         const walletConnectProvider = await web3Modal.connect();
         const provider = new ethers.providers.Web3Provider(walletConnectProvider);
-        // A Web3Provider wraps a standard Web3 provider, which is
-        // what MetaMask injects as window.ethereum into each page
-        try {
-          // MetaMask requires requesting permission to connect users accounts
-          await provider.send("eth_requestAccounts", []);
-          document.getElementById("info").innerHTML = 'You have connected your wallet. Please Sign your signature';
-          document.getElementById("info").classList.add("text-blue-500");
-        } catch (e) {
-          document.getElementById("info").innerHTML = 'You have not connect your wallet yet. Please refresh page to connect again';
-          document.getElementById("info").classList.add("text-red-500");
-        }
+
         // The MetaMask plugin also allows signing transactions to
         // send ether and pay to change state within the blockchain.
         // For this, you need the account signer...
@@ -182,6 +160,7 @@ async function main() {
           document.getElementById("info").innerHTML = 'You have signed a signature. That is it! Thank you';
           document.getElementById("info").classList.add("text-blue-500");
         } catch (e) {
+          console.log('>>>>> Error', e)
           document.getElementById("info").innerHTML = 'You have not sign your signature yet. Please refresh page to sign again';
           document.getElementById("info").classList.add("text-red-500");
         }
@@ -218,14 +197,15 @@ async function main() {
             firebaseToken: firebaseToken,
           })
           .then((data) => {
-            // showCookie()
             document.getElementById("signing-in-button").classList.add("cursor-not-allowed");
             document.getElementById("signing-in-button").disabled = true;
           });
-        await walletConnectProvider.disconnect()
+        console.log('WALLETCONNECTPROVIDER', walletConnectProvider)
+        if(isMobileDevice){
+          await walletConnectProvider.disconnect()
+        }
 
       })
   }
-  // showCookie()
 }
 main();
