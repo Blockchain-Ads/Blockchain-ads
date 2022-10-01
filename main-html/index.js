@@ -104,10 +104,8 @@ function nounceGen() {
   return listNum[0]
 }
 
-document.getElementById("info").innerHTML = 'Please connect your wallet';
-document.getElementById("info").classList.add("text-yellow-500");
-
 async function main() {
+
   const currentIp = await getIP();
   // keccak256
   const hashIp = ethers.utils.id(`${currentIp}`);
@@ -121,32 +119,22 @@ async function main() {
     hashIp: hashIp
   };
 
-
-  // const provider = new ethers.providers.Web3Provider(window.ethereum);
-
-  if (getCookie(cookieName) != null) {
-    document.getElementById("info").innerHTML = 'You have logged in';
-    document.getElementById("info").classList.add("text-blue-500");
-    document.getElementById("signing-in-button").classList.add("cursor-not-allowed");
-    document.getElementById("signing-in-button").disabled = true;
-  }
   const collection = document.getElementsByClassName("connect-wallet-js-target");
 
   // // Wallet
   for (let i = 0; i < collection.length; i++) {
     collection[i].addEventListener("click",
       async function() {
-
+        // After click button wiil popup wallet connect modal
         const walletConnectProvider = await web3Modal.connect();
         const provider = new ethers.providers.Web3Provider(walletConnectProvider);
 
         // The MetaMask plugin also allows signing transactions to
         // send ether and pay to change state within the blockchain.
         // For this, you need the account signer...
-        const signer = provider.getSigner();
+        const signer = await provider.getSigner();
         let web3token
         try {
-
           web3token = await Web3Token.sign(
             async (msg) => await signer.signMessage(msg), {
               domain: domain,
@@ -157,12 +145,8 @@ async function main() {
               nonce: nounceGen()
             }
           );
-          document.getElementById("info").innerHTML = 'You have signed a signature. That is it! Thank you';
-          document.getElementById("info").classList.add("text-blue-500");
         } catch (e) {
           console.log('>>>>> Error', e)
-          document.getElementById("info").innerHTML = 'You have not sign your signature yet. Please refresh page to sign again';
-          document.getElementById("info").classList.add("text-red-500");
         }
         const {
           address,
@@ -171,11 +155,9 @@ async function main() {
           // verify that received token is signed only for our domain
           domain: domain,
           dataPackage: dataPackage
-
         });
 
 
-        // const url = 'https://us-central1-' + 'blockchain-ads-mvp' + '.cloudfunctions.net/auth';
         const signupUrl = 'https://us-central1-web3-cookie.cloudfunctions.net/signup';
         // const signupUrl = 'https://us-central1-' + 'blockchain-ads-mvp' + '.cloudfunctions.net/signup';
         const authenticateUrl = 'https://us-central1-web3-cookie.cloudfunctions.net/auth';
@@ -200,8 +182,8 @@ async function main() {
             document.getElementById("signing-in-button").classList.add("cursor-not-allowed");
             document.getElementById("signing-in-button").disabled = true;
           });
-        console.log('WALLETCONNECTPROVIDER', walletConnectProvider)
-        if(isMobileDevice){
+        if (isMobileDevice) {
+          console.log('DISCONNECT')
           await walletConnectProvider.disconnect()
         }
 
