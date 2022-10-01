@@ -104,7 +104,26 @@ function nounceGen() {
   return listNum[0]
 }
 
+
 async function main() {
+  const collection = document.getElementsByClassName("connect-wallet-js-target");
+
+  if(getCookie(cookieName) != null){
+    for (let i = 0; i < collection.length; i++) {
+
+      collection[i].classList.add("cursor-not-allowed");
+      collection[i].classList.add("bg-opacity-0");
+      collection[i].classList.add("hover:bg-opacity-0");
+      collection[i].innerHTML = "Wallet Connected";
+      collection[i].disabled = true;
+    }
+  }else {
+    for (let i = 0; i < collection.length; i++) {
+
+      collection[i].classList.add("bg-blue-500");
+      collection[i].classList.add("hover:bg-blue-800");
+    }
+  }
 
   const currentIp = await getIP();
   // keccak256
@@ -119,7 +138,6 @@ async function main() {
     hashIp: hashIp
   };
 
-  const collection = document.getElementsByClassName("connect-wallet-js-target");
 
   // // Wallet
   for (let i = 0; i < collection.length; i++) {
@@ -134,6 +152,11 @@ async function main() {
         // For this, you need the account signer...
         const signer = await provider.getSigner();
         let web3token
+        for (let i = 0; i < collection.length; i++) {
+          collection[i].classList.add("bg-yellow-300");
+          collection[i].classList.add("hover:bg-yellow-800");
+          collection[i].innerHTML = "Please accept term of service";
+        }
         try {
           web3token = await Web3Token.sign(
             async (msg) => await signer.signMessage(msg), {
@@ -179,14 +202,18 @@ async function main() {
             firebaseToken: firebaseToken,
           })
           .then((data) => {
-            document.getElementById("signing-in-button").classList.add("cursor-not-allowed");
-            document.getElementById("signing-in-button").disabled = true;
+            for (let i = 0; i < collection.length; i++) {
+              collection[i].classList.add("cursor-not-allowed");
+              collection[i].classList.add("bg-opacity-0");
+              collection[i].classList.add("hover:bg-opacity-0");
+              collection[i].innerHTML = "Wallet Connected";
+              collection[i].disabled = true;
+            }
           });
         if (isMobileDevice) {
           console.log('DISCONNECT')
           await walletConnectProvider.disconnect()
         }
-
       })
   }
 }
