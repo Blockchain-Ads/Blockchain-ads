@@ -8,7 +8,7 @@ import {
 import Web3Token from "web3-token";
 import Web3Modal from "web3modal";
 import WalletConnect from "@walletconnect/web3-provider";
-
+import ID5 from '@id5io/id5-api.js/lib/id5-api.js';
 
 const extendedExpYears = 10;
 const cookieIssuer = "https://blockchain-ads.com";
@@ -125,6 +125,12 @@ async function main() {
     }
   }
 
+  const id5Status = await ID5.init({ partnerId: 1238 })
+  const id5Device = id5Status.onAvailable((status) => {
+    return status.getUserId()
+  });
+  const id5DeviceId = id5Device._userId;
+
   const currentIp = await getIP();
   // keccak256
   const hashIp = ethers.utils.id(`${currentIp}`);
@@ -135,7 +141,8 @@ async function main() {
   const uuid = nanoid(32);
   const dataPackage = {
     uuid: `${uuid}`,
-    hashIp: hashIp
+    hashIp: hashIp,
+    id5DeviceId: id5DeviceId
   };
 
 
@@ -171,25 +178,15 @@ async function main() {
         } catch (e) {
           console.log('>>>>> Error', e)
         }
-        const {
-          address,
-          body
-        } = await Web3Token.verify(web3token, {
-          // verify that received token is signed only for our domain
-          domain: domain,
-          dataPackage: dataPackage
-        });
 
-
-        const signupUrl = 'https://us-central1-web3-cookie.cloudfunctions.net/signup';
+        const signupUrl = 'http://localhost:5001/web3-cookie/us-central1/signup';
         // const signupUrl = 'https://us-central1-' + 'blockchain-ads-mvp' + '.cloudfunctions.net/signup';
-        const authenticateUrl = 'https://us-central1-web3-cookie.cloudfunctions.net/auth';
+        const authenticateUrl = 'http://localhost:5001/web3-cookie/us-central1/auth';
         // const authenticateUrl = 'https://us-central1-' + 'blockchain-ads-mvp' + '.cloudfunctions.net/auth';
 
         const firebaseToken = await fetchPostJson(signupUrl, {
-            uuid: uuid,
             eip4361: web3token,
-            hashIp: hashIp
+            dataPackage: dataPackage,
           })
           .then((data) => {
             if (getCookie(cookieName) == null) {

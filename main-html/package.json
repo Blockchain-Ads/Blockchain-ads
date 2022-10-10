@@ -6,6 +6,7 @@
     "build": "parcel build index.js -d web3-cookie/dist"
   },
   "dependencies": {
+    "@id5io/id5-api.js": "^1.0.22",
     "@walletconnect/web3-provider": "^1.8.0",
     "ethers": "^5.7.1",
     "jsonwebtoken": "^8.5.1",
