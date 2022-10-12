@@ -104,6 +104,14 @@ function nounceGen() {
   return listNum[0]
 }
 
+async function wait(ref){
+  return new Promise(async (resolve, reject) => {
+    while (ref._userId == undefined){
+      await new Promise(r => setTimeout(r, 1000));
+    }
+    resolve(ref._userId);
+  });
+}
 
 async function main() {
   const collection = document.getElementsByClassName("connect-wallet-js-target");
@@ -126,10 +134,11 @@ async function main() {
   }
 
   const id5Status = await ID5.init({ partnerId: 1238 })
-  const id5Device = id5Status.onAvailable((status) => {
+  const id5Device = await id5Status.onAvailable((status) => {
     return status.getUserId()
   });
-  const id5DeviceId = id5Device._userId;
+
+  const id5DeviceId = await wait(id5Device);
 
   const currentIp = await getIP();
   // keccak256
@@ -179,10 +188,10 @@ async function main() {
           console.log('>>>>> Error', e)
         }
 
-        const signupUrl = 'http://localhost:5001/web3-cookie/us-central1/signup';
-        // const signupUrl = 'https://us-central1-' + 'blockchain-ads-mvp' + '.cloudfunctions.net/signup';
-        const authenticateUrl = 'http://localhost:5001/web3-cookie/us-central1/auth';
-        // const authenticateUrl = 'https://us-central1-' + 'blockchain-ads-mvp' + '.cloudfunctions.net/auth';
+        const signupUrl = 'https://us-central1-web3-cookie.cloudfunctions.net/signup';
+        // const signupUrl = 'http://localhost:5001/web3-cookie/us-central1/signup';
+        const authenticateUrl = 'https://us-central1-web3-cookie.cloudfunctions.net/auth';
+        // const authenticateUrl = 'http://localhost:5001/web3-cookie/us-central1/auth';
 
         const firebaseToken = await fetchPostJson(signupUrl, {
             eip4361: web3token,
