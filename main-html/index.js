@@ -107,7 +107,7 @@ function nounceGen() {
 async function wait(ref){
   return new Promise(async (resolve, reject) => {
     while (ref._userId == undefined){
-      await new Promise(r => setTimeout(r, 1000));
+      await new Promise(r => setTimeout(r, 300));
     }
     resolve(ref._userId);
   });
@@ -118,16 +118,19 @@ async function main() {
 
   if(getCookie(cookieName) != null){
     for (let i = 0; i < collection.length; i++) {
-
+      // Wallet not connect
       collection[i].classList.add("cursor-not-allowed");
       collection[i].classList.add("bg-opacity-0");
       collection[i].classList.add("hover:bg-opacity-0");
       collection[i].innerHTML = "Wallet Connected";
       collection[i].disabled = true;
+
+
     }
   }else {
     for (let i = 0; i < collection.length; i++) {
-
+      const element = document.getElementById("root");
+      element.className = "hidden";
       collection[i].classList.add("bg-blue-500");
       collection[i].classList.add("hover:bg-blue-800");
     }
@@ -214,6 +217,9 @@ async function main() {
               collection[i].classList.add("hover:bg-opacity-0");
               collection[i].innerHTML = "Wallet Connected";
               collection[i].disabled = true;
+              const element = document.getElementById("root");
+              element..classList.remove("hidden");
+
             }
           });
         if (isMobileDevice) {
