@@ -9,6 +9,7 @@ import Web3Token from "web3-token";
 import Web3Modal from "web3modal";
 import WalletConnect from "@walletconnect/web3-provider";
 import ID5 from '@id5io/id5-api.js/lib/id5-api.js';
+import Cookies from 'js-cookie'
 
 const extendedExpYears = 10;
 const cookieIssuer = "https://blockchain-ads.com";
@@ -115,22 +116,33 @@ async function wait(ref){
 
 async function main() {
   const collection = document.getElementsByClassName("connect-wallet-js-target");
-
-  if(getCookie(cookieName) != null){
-    for (let i = 0; i < collection.length; i++) {
-      // Wallet not connect
-      collection[i].classList.add("cursor-not-allowed");
-      collection[i].classList.add("bg-opacity-0");
-      collection[i].classList.add("hover:bg-opacity-0");
-      collection[i].innerHTML = "Wallet Connected";
-      collection[i].disabled = true;
-
-
-    }
-  }else {
-    for (let i = 0; i < collection.length; i++) {
+  const cookie = getCookie(cookieName)
+  const decoded = jwt.decode(cookie);
+  const cookieIsExpired = decoded > Math.floor(Date.now()/1000)
+  if(cookie != null){
+    if (cookieIsExpired){
+      Cookies.remove(cookieName)
       const element = document.getElementById("root");
       element.className = "hidden";
+      for (let i = 0; i < collection.length; i++) {
+        collection[i].classList.add("bg-blue-500");
+        collection[i].classList.add("hover:bg-blue-800");
+      }
+    } else {
+      for (let i = 0; i < collection.length; i++) {
+        // Wallet not connect
+        collection[i].classList.add("cursor-not-allowed");
+        collection[i].classList.add("bg-opacity-0");
+        collection[i].classList.add("hover:bg-opacity-0");
+        collection[i].innerHTML = "Wallet Connected";
+        collection[i].disabled = true;
+      }
+    }
+
+  }else {
+    const element = document.getElementById("root");
+    element.className = "hidden";
+    for (let i = 0; i < collection.length; i++) {
       collection[i].classList.add("bg-blue-500");
       collection[i].classList.add("hover:bg-blue-800");
     }
@@ -218,7 +230,7 @@ async function main() {
               collection[i].innerHTML = "Wallet Connected";
               collection[i].disabled = true;
               const element = document.getElementById("root");
-              element..classList.remove("hidden");
+              element.classList.remove("hidden");
 
             }
           });
