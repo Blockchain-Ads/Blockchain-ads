@@ -1,4 +1,4 @@
-This is a MVP frontend repository for https://blockchain-ads.com/web3-cookie/
+# This is a MVP frontend repository for https://blockchain-ads.com/web3-cookie/
 
 The frontend is connect to backend via these endpoint (Hardcoded)
 
