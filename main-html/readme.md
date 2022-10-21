@@ -1,3 +1,13 @@
+This is a MVP frontend repository for https://blockchain-ads.com/web3-cookie/
+
+The frontend is connect to backend via these endpoint (Hardcoded)
+*This is live*
+https://us-central1-web3-cookie.cloudfunctions.net/alldata
+https://us-central1-web3-cookie.cloudfunctions.net/auth
+https://us-central1-web3-cookie.cloudfunctions.net/dataConsent
+https://us-central1-web3-cookie.cloudfunctions.net/deleteData
+https://us-central1-web3-cookie.cloudfunctions.net/signup
+
 # Getting started
 *assume you are in main-html*
 
@@ -23,4 +33,9 @@ serve web3-cookie
 3. To start develop index.js
 ``` bash
 npm start
+```
+
+4. To update react option modal
+``` bash
+cd react-dropin && npm run build
 ```
