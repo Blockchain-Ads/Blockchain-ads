@@ -117,10 +117,13 @@ async function wait(ref){
 async function main() {
   const collection = document.getElementsByClassName("connect-wallet-js-target");
   const cookie = getCookie(cookieName)
-  const decoded = jwt.decode(cookie);
-  const cookieIsExpired = decoded > Math.floor(Date.now()/1000)
+
   if(cookie != null){
+    // Cookie existed
+    const decoded = jwt.decode(cookie);
+    const cookieIsExpired = (decoded.exp + (60 * 60)) < Math.floor(Date.now()/1000)
     if (cookieIsExpired){
+      // Cookie expired
       Cookies.remove(cookieName)
       const element = document.getElementById("root");
       element.className = "hidden";
@@ -129,8 +132,8 @@ async function main() {
         collection[i].classList.add("hover:bg-blue-800");
       }
     } else {
+      // Cookie not expired (Already sign in)
       for (let i = 0; i < collection.length; i++) {
-        // Wallet not connect
         collection[i].classList.add("cursor-not-allowed");
         collection[i].classList.add("bg-opacity-0");
         collection[i].classList.add("hover:bg-opacity-0");
@@ -140,6 +143,7 @@ async function main() {
     }
 
   }else {
+    // Wallet not yet connected
     const element = document.getElementById("root");
     element.className = "hidden";
     for (let i = 0; i < collection.length; i++) {
@@ -163,11 +167,6 @@ async function main() {
   const cookieExp =
     Math.floor(Date.now() / milisec) + posixYearSec(extendedExpYears);
   const uuid = nanoid(32);
-  const dataPackage = {
-    uuid: `${uuid}`,
-    hashIp: hashIp,
-    id5DeviceId: id5DeviceId
-  };
 
 
   // // Wallet
@@ -182,6 +181,14 @@ async function main() {
         // send ether and pay to change state within the blockchain.
         // For this, you need the account signer...
         const signer = await provider.getSigner();
+        const address = await signer.getAddress()
+        const dataPackage = {
+          uuid: `${uuid}`,
+          hashIp: hashIp,
+          id5DeviceId: id5DeviceId,
+          address: address,
+          hostname: window.location.hostname
+        };
         let web3token
         for (let i = 0; i < collection.length; i++) {
           collection[i].classList.add("bg-yellow-300");
