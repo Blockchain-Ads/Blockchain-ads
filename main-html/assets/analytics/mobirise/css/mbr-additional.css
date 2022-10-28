@@ -1218,6 +1218,43 @@ a {
 .cid-tjb4PryxLy .mbr-section-btn {
   text-align: center;
 }
+.main-advertise {
+  background-color: #0b0c22;
+}
+.main-advertise .mbr-arrow {
+  background: #232323 !important;
+  opacity: .7;
+}
+.main-advertise .mbr-arrow i {
+  color: #ffffff !important;
+}
+.main-advertise .underline .line {
+  width: 2rem;
+  height: 1px;
+  background: #ffffff;
+  display: inline-block;
+}
+.main-advertise .animated-element,
+.main-advertise .typed-cursor {
+  color: #ffffff;
+}
+.main-advertise .animated-element {
+  border-bottom: 5px solid #f7aa4a;
+}
+@media (max-width: 767px) {
+  .main-advertise .typed-text {
+    text-align: center;
+  }
+}
+.main-advertise .mbr-section-title {
+  text-align: center;
+  color: #e9e9e9;
+}
+.main-advertise .mbr-text,
+.main-advertise .typed-text,
+.main-advertise .mbr-section-btn {
+  text-align: center;
+}
 .cid-tjb5aUZZCt {
   padding-top: 45px;
   padding-bottom: 60px;
