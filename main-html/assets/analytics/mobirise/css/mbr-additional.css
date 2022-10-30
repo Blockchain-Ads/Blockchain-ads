@@ -1245,6 +1245,11 @@ a {
   .main-advertise .typed-text {
     text-align: center;
   }
+  .main-advertise h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
 }
 .main-advertise .mbr-section-title {
   text-align: center;
@@ -1258,7 +1263,8 @@ a {
 .cid-tjb5aUZZCt {
   padding-top: 45px;
   padding-bottom: 60px;
-  background-image: url("../../images/bg1.jpg");
+  background-color: #0b0c22;
+  /* background-image: url("../../images/bg1.jpg"); */
 }
 .cid-tjb5aUZZCt .nav-tabs .nav-item.open .nav-link:focus,
 .cid-tjb5aUZZCt .nav-tabs .nav-link.active:focus {
@@ -1267,7 +1273,7 @@ a {
 .cid-tjb5aUZZCt .nav-tabs {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  border-right: 1px solid #111111;
+  border-right: 1px solid white;
   border-bottom: none;
   padding-right: 4rem;
 }
@@ -1283,7 +1289,7 @@ a {
   display: flex;
 }
 .cid-tjb5aUZZCt .nav-tabs .nav-link {
-  color: #111111;
+  color: white;
   font-style: normal;
   font-weight: 500;
   transition: all .5s;
@@ -1330,13 +1336,16 @@ a {
   .cid-tjb5aUZZCt p {
     padding-left: 0rem;
   }
+  .cid-tjb5aUZZCt ul {
+    margin: 0 auto 15px;
+  }
 }
 .cid-tjb5aUZZCt P {
-  color: #191919;
+  color: white;
 }
 .cid-tjb5aUZZCt H2 {
   text-align: center;
-  color: #191919;
+  color: white;
 }
 .cid-t4M8xNoRuC {
   padding-top: 75px;
