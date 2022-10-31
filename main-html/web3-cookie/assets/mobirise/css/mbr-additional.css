@@ -1226,12 +1226,12 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.cid-t4M8xNoRuC .card-wrapper {
+.cid-t4M8xNoRuC .cards-wrapper {
   background: #0d0a21;
   padding: 2rem;
 }
 @media (max-width: 767px) {
-  .cid-t4M8xNoRuC .card-wrapper {
+  .cid-t4M8xNoRuC .cards-wrapper {
     padding: 2rem 1rem;
   }
 }
@@ -1264,31 +1264,31 @@ a {
 .cid-t4M8xNoRuC .mbr-section-text {
   color: #999999;
 }
-.cid-t4M8xNoRuC .card {
+.cid-t4M8xNoRuC .cards {
   z-index: 1;
   min-height: 200px;
   margin-bottom: 2rem;
   position: relative;
   transition: all 0.3s;
 }
-.cid-t4M8xNoRuC .card .img-wrapper {
+.cid-t4M8xNoRuC .cards .img-wrapper {
   overflow: hidden;
 }
-.cid-t4M8xNoRuC .card:hover {
+.cid-t4M8xNoRuC .cards:hover {
   transform: translateY(-10px);
   cursor: pointer;
 }
-.cid-t4M8xNoRuC .card:hover .mbr-iconfont {
+.cid-t4M8xNoRuC .cards:hover .mbr-iconfont {
   color: #ffffff !important;
   border-color: #ffffff;
   -webkit-background-clip: transparent;
   -webkit-text-fill-color: unset;
 }
-.cid-t4M8xNoRuC .card:hover .card-wrapper {
+.cid-t4M8xNoRuC .cards:hover .cards-wrapper {
   background: linear-gradient(to left, #7fb8f0, #6f00f7);
   color: #ffffff !important;
 }
-.cid-t4M8xNoRuC .card:hover .card-wrapper .mbr-section-text {
+.cid-t4M8xNoRuC .cards:hover .cards-wrapper .mbr-section-text {
   color: #ffffff !important;
 }
 .cid-t4Md5lcSMa.popup-builder {
