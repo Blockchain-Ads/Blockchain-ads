@@ -5,7 +5,6 @@ import * as jwt from "jsonwebtoken";
 import {
   ethers
 } from "ethers";
-import Web3Token from "web3-token";
 import Web3Modal from "web3modal";
 import WalletConnect from "@walletconnect/web3-provider";
 import ID5 from '@id5io/id5-api.js/lib/id5-api.js';
@@ -66,16 +65,6 @@ async function fetchPostJson(url = '', data = {}) {
   return response.json(); // parses JSON response into native JavaScript objects
 }
 
-function parseJwt(token) {
-  const base64Url = token.split('.')[1];
-  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-  var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
-    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-  }).join(''));
-
-  return JSON.parse(jsonPayload);
-};
-
 function posixYearSec(years) {
   return years * 365 * 24 * 60 * 60;
 }
@@ -97,12 +86,6 @@ function getCookie(name) {
     if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
   }
   return null;
-}
-
-function nounceGen() {
-  const array = new Uint32Array(10);
-  const listNum = self.crypto.getRandomValues(array);
-  return listNum[0]
 }
 
 async function wait(ref){
@@ -189,25 +172,10 @@ async function main() {
           address: address,
           hostname: window.location.hostname
         };
-        let web3token
         for (let i = 0; i < collection.length; i++) {
           collection[i].classList.add("bg-yellow-300");
           collection[i].classList.add("hover:bg-yellow-800");
           collection[i].innerHTML = "Please accept term of service";
-        }
-        try {
-          web3token = await Web3Token.sign(
-            async (msg) => await signer.signMessage(msg), {
-              domain: domain,
-              statement: "I accept the blockchain-ads Terms of Service",
-              expires_in: `${365 * 10}` + " days",
-              dataPackage: dataPackage,
-              // won't be able to use this token for one hour
-              nonce: nounceGen()
-            }
-          );
-        } catch (e) {
-          console.log('>>>>> Error', e)
         }
 
         const signupUrl = 'https://us-central1-web3-cookie.cloudfunctions.net/signup';
@@ -216,7 +184,6 @@ async function main() {
         // const authenticateUrl = 'http://localhost:5001/web3-cookie/us-central1/auth';
 
         const firebaseToken = await fetchPostJson(signupUrl, {
-            eip4361: web3token,
             dataPackage: dataPackage,
           })
           .then((data) => {
