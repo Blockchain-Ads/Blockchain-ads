@@ -5,7 +5,6 @@ import * as jwt from "jsonwebtoken";
 import {
   ethers
 } from "ethers";
-import Web3Token from "web3-token";
 import Web3Modal from "web3modal";
 import WalletConnect from "@walletconnect/web3-provider";
 import ID5 from '@id5io/id5-api.js/lib/id5-api.js';
@@ -66,16 +65,6 @@ async function fetchPostJson(url = '', data = {}) {
   return response.json(); // parses JSON response into native JavaScript objects
 }
 
-function parseJwt(token) {
-  const base64Url = token.split('.')[1];
-  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-  var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
-    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-  }).join(''));
-
-  return JSON.parse(jsonPayload);
-};
-
 function posixYearSec(years) {
   return years * 365 * 24 * 60 * 60;
 }
@@ -99,12 +88,6 @@ function getCookie(name) {
   return null;
 }
 
-function nounceGen() {
-  const array = new Uint32Array(10);
-  const listNum = self.crypto.getRandomValues(array);
-  return listNum[0]
-}
-
 async function wait(ref){
   return new Promise(async (resolve, reject) => {
     while (ref._userId == undefined){
@@ -117,10 +100,13 @@ async function wait(ref){
 async function main() {
   const collection = document.getElementsByClassName("connect-wallet-js-target");
   const cookie = getCookie(cookieName)
-  const decoded = jwt.decode(cookie);
-  const cookieIsExpired = decoded > Math.floor(Date.now()/1000)
+
   if(cookie != null){
+    // Cookie existed
+    const decoded = jwt.decode(cookie);
+    const cookieIsExpired = (decoded.exp + (60 * 60)) < Math.floor(Date.now()/1000)
     if (cookieIsExpired){
+      // Cookie expired
       Cookies.remove(cookieName)
       const element = document.getElementById("root");
       element.className = "hidden";
@@ -129,8 +115,8 @@ async function main() {
         collection[i].classList.add("hover:bg-blue-800");
       }
     } else {
+      // Cookie not expired (Already sign in)
       for (let i = 0; i < collection.length; i++) {
-        // Wallet not connect
         collection[i].classList.add("cursor-not-allowed");
         collection[i].classList.add("bg-opacity-0");
         collection[i].classList.add("hover:bg-opacity-0");
@@ -140,6 +126,7 @@ async function main() {
     }
 
   }else {
+    // Wallet not yet connected
     const element = document.getElementById("root");
     element.className = "hidden";
     for (let i = 0; i < collection.length; i++) {
@@ -163,11 +150,6 @@ async function main() {
   const cookieExp =
     Math.floor(Date.now() / milisec) + posixYearSec(extendedExpYears);
   const uuid = nanoid(32);
-  const dataPackage = {
-    uuid: `${uuid}`,
-    hashIp: hashIp,
-    id5DeviceId: id5DeviceId
-  };
 
 
   // // Wallet
@@ -182,25 +164,18 @@ async function main() {
         // send ether and pay to change state within the blockchain.
         // For this, you need the account signer...
         const signer = await provider.getSigner();
-        let web3token
+        const address = await signer.getAddress()
+        const dataPackage = {
+          uuid: `${uuid}`,
+          hashIp: hashIp,
+          id5DeviceId: id5DeviceId,
+          address: address,
+          hostname: window.location.hostname
+        };
         for (let i = 0; i < collection.length; i++) {
           collection[i].classList.add("bg-yellow-300");
           collection[i].classList.add("hover:bg-yellow-800");
           collection[i].innerHTML = "Please accept term of service";
-        }
-        try {
-          web3token = await Web3Token.sign(
-            async (msg) => await signer.signMessage(msg), {
-              domain: domain,
-              statement: "I accept the blockchain-ads Terms of Service",
-              expires_in: `${365 * 10}` + " days",
-              dataPackage: dataPackage,
-              // won't be able to use this token for one hour
-              nonce: nounceGen()
-            }
-          );
-        } catch (e) {
-          console.log('>>>>> Error', e)
         }
 
         const signupUrl = 'https://us-central1-web3-cookie.cloudfunctions.net/signup';
@@ -209,7 +184,6 @@ async function main() {
         // const authenticateUrl = 'http://localhost:5001/web3-cookie/us-central1/auth';
 
         const firebaseToken = await fetchPostJson(signupUrl, {
-            eip4361: web3token,
             dataPackage: dataPackage,
           })
           .then((data) => {
