@@ -27,7 +27,7 @@ useEffect(() => {
 }, []);
 
 
-const [localStorageData, setLocalStorageData] = useState(async () => {
+const [localStorageData, setLocalStorageData] = useState(() => {
   let currentValue; // currently cookie is just a string not an object
   try {
     currentValue = Cookies.get(cookieName) || String(defaultCookieData)

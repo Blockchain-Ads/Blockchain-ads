@@ -1,4 +1,5 @@
-// import logo from './logo.svg';
+import React from 'react';
+import logo from './logo.svg';
 import './App.css';
 import ToggleButton from "./ToggleButton";
 import DeleteAccountButton from "./DeleteAccountButton";
