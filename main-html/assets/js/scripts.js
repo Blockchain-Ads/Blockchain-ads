@@ -643,6 +643,89 @@ NioApp = function (NioApp, $, window, document) {
         }
 	};
     NioApp.components.docReady.push(NioApp.Plugins.carousel);
+
+        // Carousel !Plugin @v1.1
+        NioApp.Plugins.carousel = function () {
+            var $carousel = $('.has-carousel-with-margin');
+            if ($carousel.exists()) {
+                $carousel.each(function () {
+                    var $self = $(this);
+                    var isMobile = window.orientation > -1;
+                    var cim = ($self.data('items')) ? $self.data('items') : 4;
+                    var cim_l = ($self.data('items-desk')) ? $self.data('items-desk') : cim;
+                    var cim_t_l = ($self.data('items-tab-l')) ? $self.data('items-tab-l') : (cim > 3 ? (cim - 1) : cim);
+                    var cim_t_p = ($self.data('items-tab-p')) ? $self.data('items-tab-p') : (cim_t_l > 2 ? (cim_t_l - 1) : cim_t_l);
+                    var cim_m = ($self.data('items-mobile')) ? $self.data('items-mobile') : (cim_t_p > 1 ? (cim_t_p - 1) : cim_t_p);
+                    var cim_xm = ($self.data('items-mobile-s')) ? $self.data('items-mobile-s') : cim_m;
+                    var c_timeout =($self.data('timeout')) ? $self.data('timeout') : 6000;
+                    var c_auto =($self.data('auto')) ? $self.data('auto') : false,
+                        c_auto_speed =($self.data('auto-speed')) ? $self.data('auto-speed') : 600,
+                        c_loop =($self.data('loop')) ? $self.data('loop') : false,
+                        c_dots = ($self.data('dots')) ? $self.data('dots') : false,
+                        c_custdots = ($self.data('custom-dots')) ? '.'+$self.data('custom-dots') : false,
+                        c_navs = ($self.data('navs')) ? $self.data('navs') : false,
+                        c_ctr = ($self.data('center')) ? $self.data('center') : false,
+                        c_mgn = ($self.data('margin')) ? $self.data('margin') : isMobile ? 30: 180,
+                        c_mgn_t_l = ($self.data('margin-tab-l')) ? $self.data('margin-tab-l') : c_mgn,
+                        c_mgn_t_p = ($self.data('margin-tab-p')) ? $self.data('margin-tab-p') : c_mgn_t_l,
+                        c_mgn_mob = ($self.data('margin-mob')) ? $self.data('margin-mob') : c_mgn_t_p,
+                        c_animate_out = ($self.data('animate-out')) ? $self.data('animate-out') : false,
+                        c_animate_in = ($self.data('animate-in')) ? $self.data('animate-in') : false;   
+    
+                    
+                    if(cim <= 1){ cim = cim_l = cim_t_l = cim_t_p = cim_m = 1;}
+                    
+                    $self.addClass('owl-carousel').owlCarousel({
+                        navText: ['',''],
+                        items: cim, 
+                        loop: c_loop, 
+                        nav: c_navs, 
+                        dots: c_dots,
+                        dotsContainer: c_custdots, 
+                        margin: c_mgn, 
+                        center: c_ctr,
+                        autoplay: c_auto, 
+                        autoplayTimeout: c_timeout, 
+                        autoplaySpeed: c_auto_speed,
+                        animateOut : c_animate_out,
+                        animateIn : c_animate_in,
+                        rtl: NioApp.getStatus.isRTL,
+                        autoHeight: false,
+                        responsive:{ 
+                            0:{ items:cim_xm, margin: c_mgn_mob }, 
+                            576:{ items:cim_xm, margin: c_mgn_mob }, 
+                            768:{ items: cim_t_p, margin: c_mgn_t_l }, 
+                            992:{ items: cim_l, margin: c_mgn_t_l }, 
+                            1200:{ items: cim, margin: c_mgn },
+                            1600:{ items: cim_l, margin: c_mgn } 
+                        },
+                        onInitialized: function() {
+                            if($().waypoint) { Waypoint.refreshAll(); }
+                        }
+                    });
+                    
+                    if ($self.data('blank')===true) {
+                        fixing_blank($self);
+                        $win.on('resize', function() {
+                            fixing_blank($self);
+                        });
+                    }                
+                });
+            }
+            function fixing_blank (_this) {
+                var _self = $(_this);
+                if(!_self.hasClass('blank-added') && $win.width() > 575) {
+                    _self.trigger('add.owl.carousel', ['<div class="item-blank"></div>']);
+                    _self.addClass('blank-added').removeClass('blank-removed');
+                    _self.trigger('refresh.owl.carousel');
+                } else if (!_self.hasClass('blank-removed') && $win.width() < 576 && _self.hasClass('blank-added') ) {
+                    _self.trigger('remove.owl.carousel', -1);
+                    _self.addClass('blank-removed').removeClass('blank-added');
+                    _self.trigger('refresh.owl.carousel');
+                }
+            }
+        };
+        NioApp.components.docReady.push(NioApp.Plugins.carousel);
     
     // Flex Slider !Plugin @v1.9.1
 	NioApp.Plugins.flexslider = function () {
