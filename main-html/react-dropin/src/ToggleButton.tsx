@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie"
 import jwt_decode from "jwt-decode";
+import useLocalStorage, {localStorageDatas} from "./LocalStorageContext"
 
 const ToggleButton = () => {
 // TODO get data from DB
@@ -26,20 +27,23 @@ useEffect(() => {
 
 }, []);
 
+  const { localStorageData, setLocalStorageData } = useLocalStorage()
 
-const [localStorageData, setLocalStorageData] = useState(async () => {
-  let currentValue; // currently cookie is just a string not an object
-  try {
-    currentValue = Cookies.get(cookieName) || String(defaultCookieData)
-console.log('CURRENTVALUE', currentValue)
-    const decoded = jwt_decode(currentValue);
-    console.log('DECODED', decoded)
-  } catch (error) {
-    console.error(">>>", error)
-    currentValue = defaultCookieData;
-  }
-  return currentValue;
-});
+// const [localStorageData, setLocalStorageData] = useState(() => {
+//   let currentValue; // currently cookie is just a string not an object
+//   try {
+//     currentValue = Cookies.get(cookieName) || String(defaultCookieData)
+// console.log('CURRENTVALUE', currentValue)
+//     const decoded = jwt_decode(currentValue);
+//     console.log('DECODED', decoded)
+//   } catch (error) {
+//     console.error(">>>", error)
+//     currentValue = defaultCookieData;
+//   }
+//   return currentValue;
+// });
+
+
 
 async function toggleDataConsent() {
     setLocalStorageData(Cookies.get(cookieName) || String(defaultCookieData))
@@ -57,6 +61,9 @@ async function toggleDataConsent() {
 return(
 
 <div className="mt-4">
+  <p>localStorageData</p>
+
+  <p>{localStorageData}</p>
   <label htmlFor="default-toggle" className="inline-flex relative items-center cursor-pointer">
     <input type="checkbox" value="" id="default-toggle" className="sr-only peer"></input>
     {isOn ? (

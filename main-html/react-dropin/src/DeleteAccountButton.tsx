@@ -10,7 +10,7 @@ const cookieName = "BCA-universal-cookie";
 const defaultCookieData = ""
 
 // TODO refactor to use prop instead
-const [localStorageData, setLocalStorageData] = useState(async () => {
+const [localStorageData, setLocalStorageData] = useState(() => {
   let currentValue; // currently cookie is just a string not an object
   try {
     currentValue = Cookies.get(cookieName) || String(defaultCookieData)
@@ -26,8 +26,9 @@ const [localStorageData, setLocalStorageData] = useState(async () => {
 
 
 async function deleteData() {
-  setLocalStorageData(Cookies.get(cookieName) || String(defaultCookieData))
   const localStorageString = Cookies.get(cookieName) || String(defaultCookieData)
+  setLocalStorageData(localStorageString)
+
     const url = baseURL+"/deleteData";
     axios.post(url, {
         firebaseToken: localStorageString,
