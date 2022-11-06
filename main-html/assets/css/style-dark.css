@@ -5700,6 +5700,12 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .has-carousel .partner-logo img { margin-right: auto; }
 
+.owl-item {
+  height: 100px;
+  display: grid;
+  place-items: center;
+}
+
 .partner-list-lg .partner-logo { padding: 20px 25px; }
 
 .partner-list-lg .partner-logo img { max-height: 50px; }
