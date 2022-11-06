@@ -1377,7 +1377,7 @@ a {
   align-items: center;
   margin: auto;
   padding-bottom: 1rem;
-  background: linear-gradient(to left, #7fb8f0, #6f00f7);
+  background: white; /*linear-gradient(to left, #7fb8f0, #6f00f7); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
