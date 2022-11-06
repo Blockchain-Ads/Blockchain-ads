@@ -5700,7 +5700,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .has-carousel .partner-logo img { margin-right: auto; }
 
-.owl-item {
+#top-advisors .owl-item {
   height: 100px;
   display: grid;
   place-items: center;
