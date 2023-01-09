@@ -16,9 +16,6 @@
 <!-- Extra CSS -->
 <link rel="stylesheet" href="assets/css/theme.css?ver=1930">
 
-
-
-
 </head>
 
 
@@ -98,7 +95,6 @@
                                         <div class="cpn-head">
                                             <h2 class="title ttu">Our Blog</h2>
                                             <p>Changing the way users interact with Ads on the web.</p>
-                                            <p>Learn More</p>
                                         </div>
                                     </div>
                                 </div>
@@ -107,97 +103,7 @@
                     </div>
 
                     <div class="nk-block nk-block-blog">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="blog">
-                                    <div class="blog-photo">
-                                        <img src="images/blog/a.jpg" alt="blog-thumb">
-                                    </div>
-                                    <div class="blog-text">
-                                        <ul class="blog-meta">
-                                            <li><a href="#">12 Mar, 2018</a></li>
-                                            <li><a href="#">Blockchain</a></li>
-                                        </ul>
-                                        <h4 class="title title-sm"><a href="#">The Intersection with Blockchain.</a></h4>
-                                        <p>Blockchain Meets Energy Surplus of electrical energy is sometimes ut perspiciatis unde omnis iste natus...</p>
-                                    </div>
-                                </div><!-- .blog -->
-                            </div><!-- .col -->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="blog">
-                                    <div class="blog-photo">
-                                        <img src="images/blog/b.jpg" alt="blog-thumb">
-                                    </div>
-                                    <div class="blog-text">
-                                        <ul class="blog-meta">
-                                            <li><a href="#">12 Mar, 2018</a></li>
-                                            <li><a href="#">Blockchain</a></li>
-                                        </ul>
-                                        <h4 class="title title-sm"><a href="#">The Intersection with Blockchain.</a></h4>
-                                        <p>Blockchain Meets Energy Surplus of electrical energy is sometimes ut perspiciatis unde omnis iste natus...</p>
-                                    </div>
-                                </div><!-- .blog -->
-                            </div><!-- .col -->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="blog">
-                                    <div class="blog-photo">
-                                        <img src="images/blog/c.jpg" alt="blog-thumb">
-                                    </div>
-                                    <div class="blog-text">
-                                        <ul class="blog-meta">
-                                            <li><a href="#">12 Mar, 2018</a></li>
-                                            <li><a href="#">Blockchain</a></li>
-                                        </ul>
-                                        <h4 class="title title-sm"><a href="#">The Intersection with Blockchain.</a></h4>
-                                        <p>Blockchain Meets Energy Surplus of electrical energy is sometimes ut perspiciatis unde omnis iste natus...</p>
-                                    </div>
-                                </div><!-- .blog -->
-                            </div><!-- .col -->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="blog">
-                                    <div class="blog-photo">
-                                        <img src="images/blog/d.jpg" alt="blog-thumb">
-                                    </div>
-                                    <div class="blog-text">
-                                        <ul class="blog-meta">
-                                            <li><a href="#">12 Mar, 2018</a></li>
-                                            <li><a href="#">Blockchain</a></li>
-                                        </ul>
-                                        <h4 class="title title-sm"><a href="#">The Intersection with Blockchain.</a></h4>
-                                        <p>Blockchain Meets Energy Surplus of electrical energy is sometimes ut perspiciatis unde omnis iste natus...</p>
-                                    </div>
-                                </div><!-- .blog -->
-                            </div><!-- .col -->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="blog">
-                                    <div class="blog-photo">
-                                        <img src="images/blog/e.jpg" alt="blog-thumb">
-                                    </div>
-                                    <div class="blog-text">
-                                        <ul class="blog-meta">
-                                            <li><a href="#">12 Mar, 2018</a></li>
-                                            <li><a href="#">Blockchain</a></li>
-                                        </ul>
-                                        <h4 class="title title-sm"><a href="#">The Intersection with Blockchain.</a></h4>
-                                        <p>Blockchain Meets Energy Surplus of electrical energy is sometimes ut perspiciatis unde omnis iste natus...</p>
-                                    </div>
-                                </div><!-- .blog -->
-                            </div><!-- .col -->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="blog">
-                                    <div class="blog-photo">
-                                        <img src="images/blog/f.jpg" alt="blog-thumb">
-                                    </div>
-                                    <div class="blog-text">
-                                        <ul class="blog-meta">
-                                            <li><a href="#">12 Mar, 2018</a></li>
-                                            <li><a href="#">Blockchain</a></li>
-                                        </ul>
-                                        <h4 class="title title-sm"><a href="#">The Intersection with Blockchain.</a></h4>
-                                        <p>Blockchain Meets Energy Surplus of electrical energy is sometimes ut perspiciatis unde omnis iste natus...</p>
-                                    </div>
-                                </div><!-- .blog -->
-                            </div><!-- .col -->
+                        <div class="row" id="articles">
                         </div><!-- .row -->
                         <!-- paggination -->
                         <!-- <nav class="w-100 d-flex">
@@ -286,10 +192,31 @@
 	</div>
 
 	<div class="preloader"><span class="spinner spinner-round"></span></div>
+
+            <!-- Modal @s -->
+            <div class="modal fade" id="register-popup">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><em class="ti ti-close"></em></a>
+                        <div class="ath-container m-0">
+                            <div class="ath-body bg-theme tc-light">
+                                <h5 class="ath-heading title">Sign Up</h5>
+                                <div style="display: flex; justify-content: center;">
+                                    <img style="cursor: pointer" src="images/logo-s2-white.png" alt="blockchain ads logo on blockchain-ads.com hompage in the modal container" width="200" >
+                                </div>
+                                <h4 class="ath-heading mt-4" style="cursor: pointer">Private Alpha</h4>
+                                <div class="sap-text"><span>Limited Access</span></div>
+                                <div class="_form_14"></div><script src="https://leanmarketing88242.activehosted.com/f/embed.php?id=14" type="text/javascript" charset="utf-8"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 	
 	<!-- JavaScript -->
 	<script src="assets/js/jquery.bundle.js?ver=1930"></script>
 	<script src="assets/js/scripts.js?ver=1930"></script>
 	<script src="assets/js/charts.js"></script>
+	<script src="assets/js/articles.js"></script>
 </body>
 </html>
