@@ -1,5 +1,28 @@
 const articles = [
     {
+        date: 'Jan 13, 2023',
+        section: 'Nft',
+        image: 'https://miro.medium.com/fit/c/224/224/1*6XcnZ81Xsz9NrPUGkR-OLw.png',
+        imageLarge: 'https://miro.medium.com/max/1400/1*6XcnZ81Xsz9NrPUGkR-OLw.png',
+        title: `Learnings from existing data and statistics in NFT user acquisition`,
+        text: `The non-fungible token (NFT) market has exploded in popularity in recent years, with the total value of NFT sales reaching over $2 billion...`,
+        description: `
+        <p>The non-fungible token (NFT) market has exploded in popularity in recent years, with the total value of NFT sales reaching over $2 billion in 2021 alone. As more and more companies, artists, and content creators begin to explore the potential of NFTs, user acquisition has become a key focus for many in the industry. In this article, we’ll take a look at some of the key learnings from existing data and statistics on NFT user acquisition.</p>
+        <h4>1. The importance of a strong value proposition</h4>
+        <p>One of the most important factors in acquiring and retaining NFT users is the value proposition of your NFTs. This includes the uniqueness and perceived value of the NFT itself, as well as the utility or benefits it provides to the user. For example, an NFT that offers exclusive access to a particular event or experience is likely to be more appealing to users than an NFT that offers little more than bragging rights.</p>
+        <h4>2. The role of social media and influencers</h4>
+        <p>Social media platforms and influencers have played a significant role in the growth of the NFT market. Many successful NFT projects have used social media and influencers to reach new audiences and drive user acquisition. For example, popular Twitch streamer and NFT collector DrLupo has used his platform to promote and sell NFTs, while the NBA Top Shot NFT platform has leveraged the popularity of professional basketball to drive adoption.</p>
+        <h4>3. The importance of education and onboarding</h4>
+        <p>Many people are still unfamiliar with NFTs and how they work, so it’s important to provide clear and accessible education and onboarding materials to help new users understand the technology and how to use it. This includes providing easy-to-follow guides and tutorials, as well as offering customer support to answer any questions users may have.</p>
+        <h4>4. The role of marketing and advertising</h4>
+        <p>Marketing and advertising can also play a key role in NFT user acquisition. While organic growth and word-of-mouth recommendations can certainly be effective, targeted advertising campaigns can also help to reach new audiences and drive adoption.</p>
+        <h4>5. The importance of building a strong community</h4>
+        <p>Finally, building a strong and engaged community around your NFT project can be a key factor in user acquisition and retention. This includes fostering a sense of community and inclusivity, as well as providing opportunities for users to interact and collaborate with each other.</p>
+        <p>In conclusion, user acquisition is a critical factor in the success of any NFT project. By focusing on a strong value proposition, leveraging social media and influencers, providing education and onboarding materials, utilizing marketing and advertising, and building a strong community, you can increase the chances of success for your NFT project.</p>
+        <p>If you want to learn how NFT Projects are using Blockchain-Ads to find buyers, contact us on Telegram https://t.me/the_blockchain_ads and via email contact@blockchain-ads.com</p>
+        `
+    },
+    {
         date: 'Jan 10, 2023',
         section: 'Web 3 Advertising',
         image: 'https://miro.medium.com/fit/c/224/224/1*9Anvugj0iQTWpNBz0rSGmw.png',
