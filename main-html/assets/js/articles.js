@@ -235,20 +235,30 @@ const articles = [
     }
 ];
 
-function loadArticles() {
+function loadArticles(loadRest = false) {
     const articlesHTML = document.getElementById("articles");
     if (!articlesHTML) return;
-    articlesHTML.innerHTML = '';
+
     articleHeight = '670px';
     if (window.innerWidth <= 480) {
         articleHeight = '600px';
     } else if (window.innerWidth <= 1200) {
         articleHeight = '770px';
     }
+
+    let neededArticles = [];
+    if (loadRest) {
+        document.getElementById('show-all').style.display = 'none';
+        neededArticles = articles.slice(6, articles.length);     
+    } else {
+        articlesHTML.innerHTML = '';
+        document.getElementById('show-all').style.display = 'inline-block';
+        neededArticles = articles.slice(0, 6);
+    }
     
-    articles.forEach((article, index) => {
-        articlesHTML.innerHTML = articlesHTML.innerHTML + `<div class="col-lg-4 col-sm-6">
-        <div class="blog" style="height: ${articleHeight}">
+    neededArticles.forEach((article, index) => {
+        articlesHTML.innerHTML += `<div class="col-lg-4 col-sm-6">
+        <div class="blog" style="height: ${articleHeight};background: rgba(25, 29, 71, 0.7);color: white;">
             <div class="blog-photo">
                 <img src="${article.image}" alt="blog-thumb">
             </div>
@@ -257,7 +267,7 @@ function loadArticles() {
                     <li>${article.date}</li>
                     <li>${article.section}</li>
                 </ul>
-                <h4 class="title title-sm"><a href="./blog-details.html?id=${index}">${article.title}</a></h4>
+                <h4 class="title title-sm"><a href="./blog-details.html?id=${index}" style="color: white;">${article.title}</a></h4>
                 <p>${article.text}</p>
             </div>
         </div>
@@ -293,7 +303,4 @@ function loadArticle() {
 
 loadArticles();
 loadArticle();
-addEventListener("resize", (event) => {
-    loadArticles();
-    loadArticle();
-});
+addEventListener("resize", () => loadArticles());
