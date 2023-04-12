@@ -191,7 +191,7 @@ const articles = [
             <li>Our <a href="https://blockchain-ads.com/tokenomics.pdf" target="#">Tokenomics</a></li>
             <li>Our <a href="https://blockchain-ads.com/EcoSystem.pdf" target="#">Ecosystem</a></li>
         </ul>
-        <br/>
+        <br>
         <h4>A New Era Of Advertising Is Upon Us. Whether We Want It Or Not.</h4>
         <p>The current decade is proving to be a pivotal time for Web Advertising. The death of 3rd Party Cookies, the widespread use of Blockchain technology and the advent of virtual IDs are only a few of the recent developments in Digital Marketing and User Privacy in recent years.</p>
         <p>All companies and projects that interact with the Blockchain in one way or another (DeFi, Crypto, NFTs, Gaming, Metaverse, etc…) have already felt the consequences of this new era, as their potential customers, once so easy to reach, are now extremely hard to find on the open Web.</p>
@@ -206,7 +206,7 @@ const articles = [
             <li>An easy way to monetize your space</li>
             <li>An easy way to know who sees and interacts with your virtual property</li>
         </ul>
-        <br/>
+        <br>
         <p>Well, things are changing. Blockchain-Ads has already created what we call a MetaHUB: a forum of smart and creative Metaverse projects to come together and create partnerships to develop one of the first iterations of Metaverse Ads, Metaverse Data Attribution.</p>
         <p>Many more things are cooking within and without the Blockchain-Ads Ecosystem. The team is hyped to announce some of these in the upcoming days and weeks. In the meantime, if you have any questions, or you simply want to become part of our Hub, you can reach out to us at contact@blockchain-ads.com or on our Telegram channel.</p>
         `
