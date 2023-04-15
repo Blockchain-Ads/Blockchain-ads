@@ -2,13 +2,14 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/myheuqga/blockchain-ads.com/
+    - export DEPLOYPATH=/home/myheuqga/blockchain-ads.com
     - /bin/cp -R assets $DEPLOYPATH
     - /bin/cp -R documentation $DEPLOYPATH
     - /bin/cp -R form $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
     - /bin/cp -R web3-cookie $DEPLOYPATH
     - /bin/cp .gitignore $DEPLOYPATH
+    - /bin/cp .cpanel.yml $DEPLOYPATH
     - /bin/cp ad-network.html $DEPLOYPATH
     - /bin/cp ad-network2.html $DEPLOYPATH
     - /bin/cp advertise.html $DEPLOYPATH
