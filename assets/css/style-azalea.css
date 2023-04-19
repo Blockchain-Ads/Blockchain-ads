@@ -5514,7 +5514,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .team-photo-s1 { max-width: 160px; }
 
-.team-photo-small { max-width: 100px; }
+.team-photo-small { max-width: 80px; }
 
 .team-photo img { border-radius: 6px; width: 100%; transition: all .4s; }
 
