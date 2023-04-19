@@ -1,3 +1,5 @@
+[![🚀 Deploy website on push](https://github.com/Blockchain-Ads/Blockchain-ads/actions/workflows/deploy.yml/badge.svg)](https://github.com/Blockchain-Ads/Blockchain-ads/actions/workflows/deploy.yml)
+
 # This is a MVP frontend repository for https://blockchain-ads.com/web3-cookie/
 
 The frontend is connect to backend via these endpoint (Hardcoded)
