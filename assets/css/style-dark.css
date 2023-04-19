@@ -5484,7 +5484,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .team-s2:hover .team-show { opacity: .25; }
 
-.team-s4 { padding: 30px 30px; }
+.team-s4 { padding: 0; }
 
 .team-s5 { text-align: left; max-width: 228px; padding-bottom: 25px; }
 
