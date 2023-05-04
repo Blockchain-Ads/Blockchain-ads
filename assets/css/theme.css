@@ -5,3 +5,10 @@ Version   :  1.9.3
 Updated   :  05/05/2021 
 */
 /*! WRITE YOUR CUSTOM STYLE **/
+@media only screen and (max-width: 600px) {
+    .center-mobile {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }
