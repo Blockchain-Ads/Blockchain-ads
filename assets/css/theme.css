@@ -11,4 +11,7 @@ Updated   :  05/05/2021
         margin-left: 0;
         margin-right: 0;
     }
+    .partner-logo {
+        padding: 15px 10px !important;
+    }
   }
