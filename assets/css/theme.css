@@ -11,6 +11,9 @@ Updated   :  05/05/2021
         margin-left: 0;
         margin-right: 0;
     }
+    .w-50-mobile {
+        width: 50% !important;
+    }
     .partner-logo {
         padding: 15px 10px !important;
     }
