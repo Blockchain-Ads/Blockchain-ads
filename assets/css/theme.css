@@ -17,4 +17,14 @@ Updated   :  05/05/2021
     .partner-logo {
         padding: 15px 10px !important;
     }
+    .partner-list-mobile {
+        display: grid !important;
+        grid-template-columns: auto auto !important;
+    }
+    .stats {
+        padding: 10px;
+    }
+    .container-mobile {
+        padding: 0;
+    }
   }
