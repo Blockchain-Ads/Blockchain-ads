@@ -514,6 +514,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 .bg-light-alt.current { background-color: rgba(223, 234, 249, 0.7) !important; }
 
 .bg-light-grad { background-image: linear-gradient(to bottom, #fff 0%, #eff6ff 100%); }
+/* here */
 
 .bg-dark { background-color: #08091b !important; }
 
@@ -4795,6 +4796,8 @@ ul.progress-info { display: flex; justify-content: space-between; }
 .bg-white .roadmap-wrap-ovl-right:after { background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.8) 25%, #fff 60%, #fff 100%); }
 
 .bg-theme .roadmap-wrap-ovl-right:after { background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(11, 12, 34, 0.8) 25%, #0b0c22 60%, #0b0c22 100%); }
+
+.roadmap-wrap-ovl-right-white:after { background-image: linear-gradient(210deg, rgba(0, 0, 0, 0) 0%, #f2f8fe 100%) !important }
 
 .bg-theme_alt .roadmap-wrap-ovl-right:after { background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(16, 18, 45, 0.8) 25%, #10122d 60%, #10122d 100%); }
 
