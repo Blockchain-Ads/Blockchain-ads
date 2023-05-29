@@ -6929,6 +6929,12 @@ ul.progress-info { display: flex; justify-content: space-between; }
   .mobile-point-35 { left: 35% !important; } 
   .mobile-point-65 { left: 65% !important; } 
   .mobile-point-90 { left: 90% !important; } 
+  .doc-shape:before {
+    background: none !important;
+  }
+  .doc-title {
+    font-size: 13px;
+  }
 }
 
 /* END @iO */
