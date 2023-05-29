@@ -6924,5 +6924,12 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 @media (min-width: 1200px) and (min-height: 900px) { .nk-preview .banner-fs, .nk-preview .nk-pages-centered { min-height: calc(100vh - 200px); } }
 
+@media (max-width: 768px) { 
+  .mobile-point-10 { left: 10% !important; } 
+  .mobile-point-35 { left: 35% !important; } 
+  .mobile-point-65 { left: 65% !important; } 
+  .mobile-point-90 { left: 90% !important; } 
+}
+
 /* END @iO */
 /* END @iO */
