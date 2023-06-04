@@ -1,5 +1,71 @@
 const articles = [
     {
+        date: 'May 9, 2023',
+        section: 'Wallet targeting',
+        image: 'https://miro.medium.com/v2/resize:fit:448/1*GHktD0Zn1fFEjZ20MZOf7w.png',
+        imageLarge: 'https://miro.medium.com/v2/resize:fit:448/1*GHktD0Zn1fFEjZ20MZOf7w.png',
+        title: `Wallet Targeting: Unlocking the Potential of Performance-Based Marketing in the Web3 Crypto Industry`,
+        text: `The Web3 crypto industry is constantly evolving and expanding, with new projects emerging every day. One of the main goals of crypto projects is to grow their user base and increase the number of token holders. To achieve this...`,
+        description: `
+        <h4>Introduction</h4>
+        <p>The Web3 crypto industry is constantly evolving and expanding, with new projects emerging every day. One of the main goals of crypto projects is to grow their user base and increase the number of token holders. To achieve this, they need to utilize innovative marketing strategies. In this blog post, we will explore the concept of wallet targeting and how it can help increase the number of token holders using performance-based marketing.        </p>
+        <h4>What is wallet targeting?</h4>
+        <p>Wallet targeting is a data-driven marketing approach that focuses on targeting potential users based on their on-chain activities and display targeted ads on websites and apps they spend most time on. By analyzing wallet addresses, marketers can identify patterns and behaviors of potential token holders. This information can then be used to create highly targeted marketing campaigns that cater to the needs and preferences of these individuals. Wallet targeting helps businesses in the Web3 crypto industry to reach the right audience with tailored content, increasing the chances of conversion and growing their number of token holders.</p>
+        <h4>How you can benefit from wallet targeting?</h4>
+        <p>There are several benefits to using wallet targeting in the Web3 crypto industry. These include:</p>
+        <p>a. Precision Targeting: Wallet targeting allows you to target users based on their wallet activity, such as past transactions and holdings. This ensures that your marketing efforts are focused on those who are most likely to become token holders.</p>
+        <p>b. Increased ROI: By targeting users who are more likely to convert, you can achieve a higher return on investment (ROI) from your marketing campaigns.</p>
+        <p>c. Personalized Performance Based Marketing: Wallet targeting enables you to create personalized marketing campaigns that resonate with your target audience, making them more likely to engage with your content and become token holders.</p>
+        <p>d. Competitive Advantage: Wallet targeting is still a relatively new concept in the Web3 crypto industry. By adopting this strategy early, you can gain a competitive edge over other projects that have not yet implemented wallet targeting.</p>
+        <h4>Web3 Tech together with AI</h4>
+        <p>Combining wallet targeting with artificial intelligence (AI) can significantly enhance the effectiveness of your marketing campaigns. AI can be used to analyze large volumes of wallet data and identify patterns that may not be immediately apparent to human eye. This allows you to create even more targeted campaigns, leading to better results in terms of user acquisition and token holder growth.</p>
+        <p>Some ways AI can enhance wallet targeting include:</p>
+        <p>a. Predictive Analytics: AI can be used to predict which wallet addresses are most likely to become token holders, allowing you to focus your marketing efforts on these high-value users.</p>
+        <p>b. Behavioral Segmentation: AI can analyze wallet data to segment users based on their behaviors, preferences, and other factors. This enables you to create tailored marketing campaigns for each segment, further increasing the likelihood of conversion.</p>
+        <p>c. Dynamic Content: AI can help you create dynamic content that adapts to each user’s unique preferences and behaviors. This personalized approach can lead to higher engagement rates and more successful marketing campaigns.</p>
+        <h4>What are we suggesting as a solution?</h4>
+        <p>Blockchain-ads is the perfect performance-based marketing platform for companies in the Web3 crypto industry looking to increase their token holders. With our cutting-edge Web3 Advertising tech and AI pattern analytics, we help web3 brands achieve precision targeting, increased ROI, personalized marketing, and a competitive advantage over other projects.</p>
+        <p>The platform leverages wallet targeting to ensure that marketing efforts are focused on users who are most likely to become token holders. By analyzing wallet addresses, blockchain-ads identifies patterns and behaviors of potential users, enabling businesses to create highly targeted marketing campaigns that cater to the specific needs and preferences of their audience. This approach helps to increase the chances of conversion and grow the number of token holders.</p>
+        <p>By using predictive analytics, behavioral segmentation, and dynamic content creation, blockchain-ads AI can significantly enhance the effectiveness of marketing campaigns. Predictive analytics can predict which wallet addresses are most likely to become token holders, allowing businesses to focus their marketing efforts on these high-value users. Behavioral segmentation enables the creation of tailored marketing campaigns for each segment, increasing the likelihood of conversion. Dynamic content creation allows for personalized content that adapts to each user’s unique preferences and behaviors.</p>
+        <p>In conclusion, Blockchain-Ads is the perfect platform for companies in the Web3 crypto industry looking to increase their token holders. Our technology and AI provide precision targeting, personalized marketing, and a competitive advantage over other projects. By using our platform, businesses can increase their ROI and revenue, making it an essential tool for any company looking to grow their user base in the Web3 crypto industry.        </p>
+        <p>Blockchain-Ads just started our second cohort of advertisers. If you would like to test our advertising platform and see how it performs against other solutions in the market, reach out to our team at https://blockchain-ads.com/index.html#contact or on our Telegram Channel: https://t.me/the_blockchain_ads</p>
+        `
+    },
+   {
+        date: 'May 4, 2023',
+        section: 'Wallet targeting',
+        image: 'https://miro.medium.com/v2/resize:fit:448/format:webp/1*1Ax2nYMZp8MXrArEtDR7TQ.png',
+        imageLarge: 'https://miro.medium.com/v2/resize:fit:448/format:webp/1*1Ax2nYMZp8MXrArEtDR7TQ.png',
+        title: `Blockchain-Ads its opening the second group of Advertisers, after successfully first wave in Alpha stage`,
+        text: `Intro: Welcome to the exciting space where advertising and technology come together, forming a lively and captivating digital world. As the internet continues to evolve, so does the way we...`,
+        description: `
+        <h4>Intro:</h4>
+        <p>Welcome to the exciting space where advertising and technology come together, forming a lively and captivating digital world. As the internet continues to evolve, so does the way we interact with digital content. Blockchain, with its decentralized nature and secure structure, is opening new doors for advertisers to develop more transparent, efficient, and user-friendly campaigns. Our goal is to guide you through this rapidly changing environment and help you grasp the key concepts shaping the future of advertising and technology.</p>
+        <h4>Unlocking the Power of Blockchain Advertising: A Deep Dive into Blockchain-Ads</h4>
+        <p>With a focus on results, Blockchain-Ads emphasizes performance-based marketing strategies. Advertisers can measure the effectiveness of their campaigns through real-time tracking and analytics, enabling them to optimize ad placements and maximize return on investment (ROI). By prioritizing data-driven decision-making, the platform empowers advertisers to make informed choices and achieve their desired outcomes.</p>
+        <p>One of the most significant advantages of Blockchain-Ads is its commitment to user privacy and data security. By utilizing blockchain technology, the platform ensures a secure and decentralized advertising environment. This helps protect user data from being misused or exploited, providing an unparalleled level of trust and transparency for both advertisers and publishers.        </p>
+        <h4>How Wallet Targeting Revolutionizes Ad Relevance and Engagement</h4>
+        <p>Wallet targeting feature allows advertisers to reach a highly engaged and relevant audience. By identifying users based on their cryptocurrency wallet addresses, the platform can deliver tailored ads that cater to the interests and preferences of each individual. This unique approach to audience segmentation results in increased ad relevance and improved user experience.</p>
+        <h4>Wallet targeting solves several problems in the digital advertising industry, including:</h4>
+        <p><b>Enhanced Ad Relevance</b>: By targeting users based on their cryptocurrency wallet addresses, advertisers can deliver highly personalized and relevant ads. This increases the likelihood of user engagement and conversion, as the ads cater to the specific interests and preferences of each individual.</p>
+        <p><b>Improved Audience Segmentation</b>: Wallet targeting allows advertisers to identify and segment users who are already familiar with or actively participating in the cryptocurrency ecosystem. This enables advertisers to reach a more engaged and potentially high-value audience, as these users are more likely to be interested in crypto-related products and services.</p>
+        <p><b>Reduced Ad Wastage</b>: Traditional advertising methods often suffer from poor targeting and ad wastage, where ads are shown to users who have little interest in the promoted content. Wallet targeting minimizes ad wastage by delivering ads only to users who are likely to be interested in the advertiser’s offerings, resulting in a more efficient use of advertising resources.</p>
+        <h4>Solution: Blockchain-Ads: The Game Changer for Web3 Advertising</h4>
+        <p>Blockchain-Ads is revolutionizing the advertising ecosystem for Web3 and crypto projects by offering a suite of innovative features tailored to address the unique needs of the industry. The platform’s primary offerings include:</p>
+        <h5>Performance-Based Advertising Model</h5>
+        <p>The performance-based advertising model ensures that advertisers only pay for tangible results. This approach maximizes ROI by eliminating the risks associated with traditional advertising methods, which often involve spending money without a guarantee of user engagement. By charging advertisers only for successful conversions, such as clicks, leads, or sales, Blockchain-Ads empowers organizations to optimize their marketing budgets and drive growth.</p>
+        <h5>Wallet Targeting</h5>
+        <p>The platform’s wallet targeting feature enables advertisers to segment their audience based on specific wallet addresses. This advanced targeting option ensures that marketing efforts are focused on the most relevant and engaged users, ultimately leading to higher conversion rates. By leveraging wallet targeting, advertisers can reach potential investors, token holders, or users of specific decentralized applications (dApps) with precision and accuracy.</p>
+        <h5>Comprehensive Analytics</h5>
+        <p>Blockchain-Ads offers in-depth analytics that help advertisers gain valuable insights into their campaigns’ performance. The platform’s robust reporting tools provide a comprehensive view of key metrics, such as impressions, clicks, and conversion rates. These insights enable advertisers to make data-driven decisions, optimize their campaigns, and identify opportunities for growth.</p>
+        <h4>Conclusion:</h4>
+        <p>The fusion of advertising and blockchain technology presents a promising new frontier in the digital world, offering many benefits for both advertisers and users. The power of platforms like Blockchain-Ads, will help companies or advertisers optimize their campaigns through performance-based marketing strategies, ensuring data-driven decision-making and maximum ROI.</p>
+        <p>Embracing innovative approaches like wallet targeting not only improves ad relevance and audience segmentation but also addresses key industry challenges such as ad wastage, user privacy, and fraud prevention. As the internet continues to evolve, staying ahead of the curve by adopting blockchain technology and its applications in advertising will be crucial for businesses seeking to thrive in this dynamic environment.</p>
+        <p>Blockchain-Ads just started our second wave of alpha test. If you would like to test our advertising platform and see how it performs against other solutions in the market, reach out to our team at https://blockchain-ads.com/index.html#contact or on our Telegram Channel: https://t.me/the_blockchain_ads</p>
+        <a target="#" href="https://calendly.com/blockchain-ads/vlad?month=2023-05">Launch your campaign today</a>
+        `
+    },
+    {
         date: 'Jan 13, 2023',
         section: 'Nft',
         image: 'https://miro.medium.com/fit/c/224/224/1*6XcnZ81Xsz9NrPUGkR-OLw.png',
