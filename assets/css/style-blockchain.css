@@ -6667,7 +6667,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 /** 04.15 news */
 .news-item { display: flex; flex-direction: column; height: 100%; }
 
-.news-thumb img { border-radius: 0.75rem 0.75rem 0 0; object-fit: cover; }
+.news-thumb img { border-radius: 0.75rem 0.75rem 0 0; object-fit: cover; height: 170px; }
 
 .news-excerpt { padding: 1.5rem; border-radius: 0.75rem; background: #fff; border-radius: 0 0 0.75rem 0.75rem; border: 1px solid rgba(0, 0, 0, 0.1); border-top: none; display: flex; flex-direction: column; flex-grow: 1; }
 

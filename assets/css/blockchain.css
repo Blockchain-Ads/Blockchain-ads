@@ -158,6 +158,12 @@ progress { vertical-align: baseline; }
 
 [hidden] { display: none !important; }
 
+.news-content { padding: 15px; height: 100%;}
+
+.news-text {font-weight: 100; margin-bottom: 50px;}
+
+.news-meta {color: black; position: absolute; bottom: 0; padding-bottom: 10px;}
+
 .lead { font-size: 1.25rem; font-weight: 300; }
 
 .display-1 { font-size: calc(1.625rem + 4.5vw); font-weight: 300; line-height: 1.2; }
