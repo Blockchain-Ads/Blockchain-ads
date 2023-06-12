@@ -131,6 +131,8 @@
  h5, .h5 { font-size: 1.25rem; }
  
  h6, .h6 { font-size: 1rem; }
+
+ .p-50 { padding: 45px !important }
  
  .lead { font-size: 1.25rem; font-weight: 300; }
  
@@ -651,7 +653,7 @@
  .table-dark.table-hover tbody tr:hover { color: #fff; background-color: rgba(255, 255, 255, 0.075); }
  
  @media (max-width: 575.98px) { .table-responsive-sm { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-   .table-responsive-sm > .table-bordered { border: 0; } }
+   .table-responsive-sm > .table-bordered { border: 0; }  .p-50 { padding: 20px !important }}
  
  @media (max-width: 767.98px) { .table-responsive-md { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
    .table-responsive-md > .table-bordered { border: 0; } }
@@ -1879,7 +1881,7 @@
  
  .rounded-right { border-top-right-radius: 0.25rem !important; border-bottom-right-radius: 0.25rem !important; }
  
- .rounded-bottom { border-bottom-right-radius: 0.25rem !important; border-bottom-left-radius: 0.25rem !important; }
+ .rounded-bottom { border-bottom-right-radius: 0.5rem !important; border-bottom-left-radius: 0.5rem !important; }
  
  .rounded-left { border-top-left-radius: 0.25rem !important; border-bottom-left-radius: 0.25rem !important; }
  
