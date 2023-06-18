@@ -324,20 +324,19 @@ function loadArticles(loadRest = false) {
     
     neededArticles.forEach((article, index) => {
         articlesHTML.innerHTML += `<div class="col-lg-4 col-sm-6">
-        <div class="blog" style="height: ${articleHeight};background: rgba(25, 29, 71, 0.7);color: white;">
-            <div class="blog-photo">
-                <img src="${article.image}" alt="blog-thumb">
-            </div>
+        <div class="blog" style="height: ${articleHeight}; margin: 20px" class="bg-light-grad tc-dark">
+            <img src="${article.image}" class="w-100 rounded-top" style="height: 250px" alt="blog-thumb">
             <div class="blog-text">
                 <ul class="blog-meta">
                     <li>${article.date}</li>
                     <li>${article.section}</li>
                 </ul>
-                <h4 class="title title-sm"><a href="./blog-details.html?id=${index}" style="color: white;">${article.title}</a></h4>
+                <h4 class="title title-sm"><a href="./blog-details.html?id=${index}">${article.title}</a></h4>
                 <p>${article.text}</p>
             </div>
         </div>
-    </div>`
+    </div>
+    `
     });
 }
 

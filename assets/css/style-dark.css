@@ -455,7 +455,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 /** 02.03 Colors */
 .tc-base-white, .tc-light, .tc-light a:not(.btn):not([class*="link-"]) { color: #eff6ff; }
 
-.tc-base-white-hover, .tc-light a:not(.btn):not([class*="link-"]):hover { color: #46bdf4; }
+.tc-base-white-hover, .tc-light a:not(.btn):not([class*="link-"]):hover { color: #46bdf4 !important; }
 
 .tc-default, .tc-default a { color: #28384c !important; }
 
