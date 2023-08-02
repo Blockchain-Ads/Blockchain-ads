@@ -3478,7 +3478,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .tab-nav-s4 li a.active { color: #0f1932 !important; background: #fff; }
 
-.tc-light .tab-nav-s4 li a.active:hover { color: tab_nav_s4_active_color !important; }
+.tc-light .tab-nav-s4 li a.active:hover { color: #FFFFFF !important; }
 
 .tc-light .tab-nav-s4 li a:hover { color: #fff !important; }
 

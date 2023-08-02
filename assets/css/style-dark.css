@@ -3475,7 +3475,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .tab-nav-s4 li a.active { color: #0b0c22 !important; background: #fff; }
 
-.tc-light .tab-nav-s4 li a.active:hover { color: tab_nav_s4_active_color !important; }
+.tc-light .tab-nav-s4 li a.active:hover { color: #FFFFFF !important; }
 
 .tc-light .tab-nav-s4 li a:hover { color: #fff !important; }
 
@@ -3625,7 +3625,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .accordion-icon { position: absolute; top: calc(50% + 4px); transform: translateY(-50%); right: 0; height: 36px; width: 36px; border-radius: 50%; background: transparent; }
 
-.current .accordion-icon { background: transparentt; }
+.current .accordion-icon { background: transparent; }
 
 .accordion-icon:before, .accordion-icon:after { line-height: 36px; color: #10122d; font-family: "Font Awesome 5 Free"; font-weight: 700; font-size: 13px; text-align: center; transition: all .4s; }
 
